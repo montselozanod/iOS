@@ -11,7 +11,7 @@
 #import "MDDetailViewController.h"
 
 @interface MDMasterViewController () {
-    NSMutableArray *nombre;
+    NSMutableArray *perfiles;
   
 }
 @end
@@ -31,8 +31,18 @@
 
     /*UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;*/
-    nombre = [[NSMutableArray alloc] initWithObjects: @"Montse", @"Carlos", @"Fany", @"Neni", @"Mapy", @"Marce", nil];
+    NSMutableArray *nombre = [[NSMutableArray alloc] initWithObjects: @"Montse", @"Carlos", @"Fany", @"Neni", @"Mapy", @"Marce", nil];
+    
+    NSMutableArray *email = [[NSMutableArray alloc] initWithObjects:@"mmontse.lozano@gmail.com", @"carlos.dieck@gmail.com", @"estefania_641@hotmail.com", @"neni_blue@hotmail.com", @"mapy.dieck@gmail.com", @"marce.quintanilla@gmail.com", @"er177@gmail.com", nil];
 
+    perfiles = [[NSMutableArray alloc] init];
+    
+    for(int i = 0; i < [nombre count]; i++){
+    
+        NSDictionary *miPerf = [[NSDictionary alloc] initWithObjectsAndKeys:[nombre objectAtIndex:i], @"nombre", [email objectAtIndex:i], @"email", nil];
+        
+        [perfiles addObject:miPerf];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,7 +51,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)insertNewObject:(id)sender
+/*- (void)insertNewObject:(id)sender
 {
     if (!nombre) {
         nombre = [[NSMutableArray alloc] init];
@@ -49,7 +59,7 @@
     [nombre insertObject:[NSDate date] atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-}
+}*/
 
 //data source manejan los datos del contenido de la tabla
 //delegate maneja caracteristicas de la tabla
@@ -64,15 +74,17 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return nombre.count;
+    return perfiles.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSString *object = nombre[indexPath.row]; //el objeto que seleccionaste
-    cell.textLabel.text = object;
+    NSDictionary *object = perfiles[indexPath.row]; //el objeto que seleccionaste
+    cell.textLabel.text = [object objectForKey:@"nombre"];
+    cell.detailTextLabel.text = [object objectForKey:@"email"];
+    
     return cell;
 }
 
@@ -85,7 +97,7 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [nombre removeObjectAtIndex:indexPath.row];
+        [perfiles removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
@@ -112,7 +124,7 @@
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSString *object = nombre[indexPath.row];
+        NSDictionary *object = perfiles[indexPath.row];
         [[segue destinationViewController] setDetailItem:object];
     }
 }

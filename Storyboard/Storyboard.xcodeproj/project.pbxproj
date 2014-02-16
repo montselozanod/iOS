@@ -19,6 +19,11 @@
 		B0C1CC9618ABDC72005961DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C1CC7E18ABDC72005961DA /* UIKit.framework */; };
 		B0C1CC9E18ABDC72005961DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0C1CC9C18ABDC72005961DA /* InfoPlist.strings */; };
 		B0C1CCA018ABDC72005961DA /* StoryboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C1CC9F18ABDC72005961DA /* StoryboardTests.m */; };
+		B0C1CCAC18ABDD6D005961DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0C1CCAB18ABDD6D005961DA /* Main.storyboard */; };
+		B0C1CCAE18ABE430005961DA /* face.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B0C1CCAD18ABE430005961DA /* face.jpg */; };
+		B0C1CCB218ABE512005961DA /* StoryPerfilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C1CCB118ABE512005961DA /* StoryPerfilViewController.m */; };
+		B0C1CCB518ABE63F005961DA /* StoryImageInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C1CCB418ABE63F005961DA /* StoryImageInfoViewController.m */; };
+		B0C1CCB818ABE657005961DA /* StoryPersonalDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C1CCB718ABE657005961DA /* StoryPersonalDataViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,14 @@
 		B0C1CC9B18ABDC72005961DA /* StoryboardTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StoryboardTests-Info.plist"; sourceTree = "<group>"; };
 		B0C1CC9D18ABDC72005961DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B0C1CC9F18ABDC72005961DA /* StoryboardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoryboardTests.m; sourceTree = "<group>"; };
+		B0C1CCAB18ABDD6D005961DA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B0C1CCAD18ABE430005961DA /* face.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = face.jpg; sourceTree = SOURCE_ROOT; };
+		B0C1CCB018ABE512005961DA /* StoryPerfilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryPerfilViewController.h; sourceTree = "<group>"; };
+		B0C1CCB118ABE512005961DA /* StoryPerfilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryPerfilViewController.m; sourceTree = "<group>"; };
+		B0C1CCB318ABE63F005961DA /* StoryImageInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryImageInfoViewController.h; sourceTree = "<group>"; };
+		B0C1CCB418ABE63F005961DA /* StoryImageInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryImageInfoViewController.m; sourceTree = "<group>"; };
+		B0C1CCB618ABE657005961DA /* StoryPersonalDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryPersonalDataViewController.h; sourceTree = "<group>"; };
+		B0C1CCB718ABE657005961DA /* StoryPersonalDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryPersonalDataViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +120,15 @@
 		B0C1CC8018ABDC72005961DA /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				B0C1CCAF18ABE438005961DA /* Recursos */,
 				B0C1CC8918ABDC72005961DA /* StoryAppDelegate.h */,
 				B0C1CC8A18ABDC72005961DA /* StoryAppDelegate.m */,
 				B0C1CC8C18ABDC72005961DA /* Images.xcassets */,
 				B0C1CC8118ABDC72005961DA /* Supporting Files */,
+				B0C1CCAB18ABDD6D005961DA /* Main.storyboard */,
+				B0C1CCB918ABE717005961DA /* Story Perfil View Controller */,
+				B0C1CCBA18ABE738005961DA /* Story Image Info View Controller */,
+				B0C1CCBB18ABE74E005961DA /* Story Personal Data View Controller */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -142,6 +160,41 @@
 				B0C1CC9C18ABDC72005961DA /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B0C1CCAF18ABE438005961DA /* Recursos */ = {
+			isa = PBXGroup;
+			children = (
+				B0C1CCAD18ABE430005961DA /* face.jpg */,
+			);
+			name = Recursos;
+			sourceTree = "<group>";
+		};
+		B0C1CCB918ABE717005961DA /* Story Perfil View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B0C1CCB018ABE512005961DA /* StoryPerfilViewController.h */,
+				B0C1CCB118ABE512005961DA /* StoryPerfilViewController.m */,
+			);
+			name = "Story Perfil View Controller";
+			sourceTree = "<group>";
+		};
+		B0C1CCBA18ABE738005961DA /* Story Image Info View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B0C1CCB318ABE63F005961DA /* StoryImageInfoViewController.h */,
+				B0C1CCB418ABE63F005961DA /* StoryImageInfoViewController.m */,
+			);
+			name = "Story Image Info View Controller";
+			sourceTree = "<group>";
+		};
+		B0C1CCBB18ABE74E005961DA /* Story Personal Data View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B0C1CCB618ABE657005961DA /* StoryPersonalDataViewController.h */,
+				B0C1CCB718ABE657005961DA /* StoryPersonalDataViewController.m */,
+			);
+			name = "Story Personal Data View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,7 +273,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0C1CCAC18ABDD6D005961DA /* Main.storyboard in Resources */,
 				B0C1CC8518ABDC72005961DA /* InfoPlist.strings in Resources */,
+				B0C1CCAE18ABE430005961DA /* face.jpg in Resources */,
 				B0C1CC8D18ABDC72005961DA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,7 +295,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0C1CCB818ABE657005961DA /* StoryPersonalDataViewController.m in Sources */,
+				B0C1CCB518ABE63F005961DA /* StoryImageInfoViewController.m in Sources */,
 				B0C1CC8B18ABDC72005961DA /* StoryAppDelegate.m in Sources */,
+				B0C1CCB218ABE512005961DA /* StoryPerfilViewController.m in Sources */,
 				B0C1CC8718ABDC72005961DA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,6 +500,7 @@
 				B0C1CCA518ABDC72005961DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0C1CCA618ABDC72005961DA /* Build configuration list for PBXNativeTarget "StoryboardTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +509,7 @@
 				B0C1CCA818ABDC72005961DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -26,13 +26,38 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	self.nombreTF.text = self.nombre;
+    self.emailTF.text = self.email;
+    
+    UITapGestureRecognizer *tap =   [[UITapGestureRecognizer alloc]
+                                     initWithTarget:self
+                                     action:@selector(quitarTeclado)];
+    
+    [self.view addGestureRecognizer:tap];
+}
+
+-(void)quitarTeclado {
+    
+    [self.view endEditing:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+
+    StoryPerfilViewController *inicio = [segue destinationViewController];
+    
+    if(sender == self.doneButton){
+        inicio.nombre = self.nombreTF.text;
+        inicio.email = self.emailTF.text;
+    }
+
+    
 }
 
 @end

@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StoryPerfilViewController.h"
 
 @interface StoryPersonalDataViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UITextField *nombreTF;
+@property (strong, nonatomic) IBOutlet UITextField *emailTF;
+
+@property (strong, nonatomic) NSString *nombre;
+
+@property (strong, nonatomic) NSString *email;
+
+@property (strong, nonatomic) IBOutlet UIButton *doneButton;
+
+@property (strong, nonatomic) IBOutlet UIButton *cancelButton;
+
 
 @end

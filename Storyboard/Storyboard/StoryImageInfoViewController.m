@@ -27,6 +27,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    self.anchoLabel.text = [NSString stringWithFormat:@"%0.0f", self.ancho];
+    self.alturaLabel.text = [NSString stringWithFormat:@"%0.0f", self.alto];
 }
 
 - (void)didReceiveMemoryWarning

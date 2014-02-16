@@ -9,5 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface StoryImageInfoViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UILabel *alturaLabel;
+@property (strong, nonatomic) IBOutlet UILabel *anchoLabel;
+
+//no es clase por eso no lleva asterisco
+@property CGFloat alto;
+@property CGFloat ancho;
+
 
 @end

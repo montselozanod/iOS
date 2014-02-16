@@ -31,7 +31,8 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+        self.nombreLabel.text = [self.detailItem objectForKey:@"nombre"];
+        self.emailLabel.text = [self.detailItem objectForKey:@"email"];
     }
 }
 

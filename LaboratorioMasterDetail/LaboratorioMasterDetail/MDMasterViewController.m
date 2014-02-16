@@ -31,7 +31,7 @@
 
     /*UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;*/
-    NSMutableArray *nombre = [[NSMutableArray alloc] initWithObjects: @"Montse", @"Carlos", @"Fany", @"Neni", @"Mapy", @"Marce", nil];
+    NSMutableArray *nombre = [[NSMutableArray alloc] initWithObjects: @"Montse", @"Carlos", @"Fany", @"Neni", @"Mapy", @"Marce", @"Neto",nil];
     
     NSMutableArray *email = [[NSMutableArray alloc] initWithObjects:@"mmontse.lozano@gmail.com", @"carlos.dieck@gmail.com", @"estefania_641@hotmail.com", @"neni_blue@hotmail.com", @"mapy.dieck@gmail.com", @"marce.quintanilla@gmail.com", @"er177@gmail.com", nil];
 

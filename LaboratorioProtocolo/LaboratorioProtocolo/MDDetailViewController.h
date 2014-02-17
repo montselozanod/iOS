@@ -13,4 +13,11 @@
 @property (strong, nonatomic) id detailItem;
 
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *nombreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *telLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *emailLabel;
+
+
 @end

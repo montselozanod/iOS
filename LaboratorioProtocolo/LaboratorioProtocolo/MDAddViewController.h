@@ -10,4 +10,9 @@
 
 @interface MDAddViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *nombreTF;
+
+@property (weak, nonatomic) IBOutlet UITextField *telTF;
+@property (weak, nonatomic) IBOutlet UITextField *emailTF;
+
 @end

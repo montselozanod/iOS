@@ -68,7 +68,7 @@
             </objects>
             <point key="canvasLocation" x="459" y="64"/>
         </scene>
-        <!--Add View Controller-->
+        <!--Add View Controller - Agregar-->
         <scene sceneID="WeX-d5-UsZ">
             <objects>
                 <viewController id="lo0-bn-b8L" customClass="MDAddViewController" sceneMemberID="viewController">
@@ -117,16 +117,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Agregar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2te-Rq-fjH">
-                                <rect key="frame" x="130" y="79" width="61" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="PwF-S2-R13"/>
+                    <navigationItem key="navigationItem" title="Agregar" id="PwF-S2-R13">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="XmI-na-Gky"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="emailTF" destination="PAR-Jy-gwp" id="b3R-4l-FrF"/>
                         <outlet property="nombreTF" destination="vxc-IE-8D4" id="54w-cS-ZCz"/>
@@ -135,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cH8-e8-Yiv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="965" y="-265"/>
+            <point key="canvasLocation" x="946" y="-264"/>
         </scene>
         <!--Detail View Controller - Detail-->
         <scene sceneID="Cn3-H9-jdl">

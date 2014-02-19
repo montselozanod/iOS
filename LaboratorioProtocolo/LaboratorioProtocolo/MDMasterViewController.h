@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Perfil.h"
+#import "ProtoPerfil.h"
+#import "MDAddViewController.h"
 
-@interface MDMasterViewController : UITableViewController
+@interface MDMasterViewController : UITableViewController <ProtoPerfil>
+
+ //asi se dice que tiene que usar esa clase el protocolo protoperfil
+
 
 @end

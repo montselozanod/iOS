@@ -31,7 +31,11 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+        self.nombreLabel.text = ((Perfil *)self.detailItem).nombre;
+        self.emailLabel.text = ((Perfil *)self.detailItem).email;
+        NSString *tel = [[NSString  alloc] initWithFormat:@"%d", ((Perfil *)self.detailItem).telefono];
+        //se debe covertir primero el tel a string
+        self.telLabel.text = tel;
     }
 }
 

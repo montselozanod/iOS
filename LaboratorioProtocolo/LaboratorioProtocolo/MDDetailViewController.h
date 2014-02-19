@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Perfil.h"
 
 @interface MDDetailViewController : UIViewController
 

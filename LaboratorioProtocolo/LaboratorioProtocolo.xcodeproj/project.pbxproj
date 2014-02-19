@@ -23,6 +23,7 @@
 		B0904FC518B2817D00F3541E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0904FC318B2817D00F3541E /* InfoPlist.strings */; };
 		B0904FC718B2817D00F3541E /* LaboratorioProtocoloTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0904FC618B2817D00F3541E /* LaboratorioProtocoloTests.m */; };
 		B0904FD218B2832200F3541E /* MDAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0904FD118B2832200F3541E /* MDAddViewController.m */; };
+		B0A9D5E518B516970051BF9B /* Perfil.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A9D5E418B516970051BF9B /* Perfil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,9 @@
 		B0904FC618B2817D00F3541E /* LaboratorioProtocoloTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaboratorioProtocoloTests.m; sourceTree = "<group>"; };
 		B0904FD018B2832200F3541E /* MDAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAddViewController.h; sourceTree = "<group>"; };
 		B0904FD118B2832200F3541E /* MDAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAddViewController.m; sourceTree = "<group>"; };
+		B0A9D5E318B516970051BF9B /* Perfil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Perfil.h; sourceTree = "<group>"; };
+		B0A9D5E418B516970051BF9B /* Perfil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Perfil.m; sourceTree = "<group>"; };
+		B0A9D5E618B5214E0051BF9B /* ProtoPerfil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProtoPerfil.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,9 @@
 				B0904F9F18B2817D00F3541E /* Supporting Files */,
 				B0904FD018B2832200F3541E /* MDAddViewController.h */,
 				B0904FD118B2832200F3541E /* MDAddViewController.m */,
+				B0A9D5E318B516970051BF9B /* Perfil.h */,
+				B0A9D5E418B516970051BF9B /* Perfil.m */,
+				B0A9D5E618B5214E0051BF9B /* ProtoPerfil.h */,
 			);
 			path = LaboratorioProtocolo;
 			sourceTree = "<group>";
@@ -265,6 +272,7 @@
 				B0904FD218B2832200F3541E /* MDAddViewController.m in Sources */,
 				B0904FB218B2817D00F3541E /* MDDetailViewController.m in Sources */,
 				B0904FA918B2817D00F3541E /* MDAppDelegate.m in Sources */,
+				B0A9D5E518B516970051BF9B /* Perfil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +481,7 @@
 				B0904FCC18B2817D00F3541E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0904FCD18B2817D00F3541E /* Build configuration list for PBXNativeTarget "LaboratorioProtocoloTests" */ = {
 			isa = XCConfigurationList;
@@ -481,6 +490,7 @@
 				B0904FCF18B2817D00F3541E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

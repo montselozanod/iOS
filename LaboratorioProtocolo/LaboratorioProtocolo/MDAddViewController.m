@@ -35,4 +35,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)doneButton:(id)sender {
+    
+    
+    [self.delegado agregarPerfil:self.nombreTF.text telefono:[self.telTF.text integerValue] correo:self.emailTF.text];
+    [self.delegado removerVista];
+}
 @end

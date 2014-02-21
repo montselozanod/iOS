@@ -31,11 +31,12 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;*/
     
-    Perfil *temp = [[Perfil alloc]initWithName:@"Rosita" telefono:123456 correo:@"rosita@gmail.com"]; //creo objeto
+    /*Perfil *temp = [[Perfil alloc]initWithName:@"Rosita" telefono:123456 correo:@"rosita@gmail.com"]; */
+    //creo objeto
     
     perfiles = [[NSMutableArray alloc] init]; //inicializo array
     
-    [perfiles addObject:temp]; //agrego objeto a array
+    //[perfiles addObject:temp]; //agrego objeto a array
 }
 
 - (void)didReceiveMemoryWarning

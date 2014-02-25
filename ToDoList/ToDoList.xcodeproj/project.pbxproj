@@ -20,6 +20,9 @@
 		B0EFD1B018B7127E00511310 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0EFD1AE18B7127E00511310 /* InfoPlist.strings */; };
 		B0EFD1B218B7127E00511310 /* ToDoListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EFD1B118B7127E00511310 /* ToDoListTests.m */; };
 		B0EFD1BE18B7190200511310 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0EFD1BD18B7190200511310 /* Main.storyboard */; };
+		B0EFD1C118B7BD1B00511310 /* XYZAddToDoItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EFD1C018B7BD1B00511310 /* XYZAddToDoItemViewController.m */; };
+		B0EFD1CA18B7BF2400511310 /* XYZToDoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0EFD1C918B7BF2400511310 /* XYZToDoListViewController.m */; };
+		B0FFEB2418BB02F200CA5074 /* XYZToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FFEB2318BB02F200CA5074 /* XYZToDoItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,12 @@
 		B0EFD1AF18B7127E00511310 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B0EFD1B118B7127E00511310 /* ToDoListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoListTests.m; sourceTree = "<group>"; };
 		B0EFD1BD18B7190200511310 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B0EFD1BF18B7BD1B00511310 /* XYZAddToDoItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZAddToDoItemViewController.h; sourceTree = "<group>"; };
+		B0EFD1C018B7BD1B00511310 /* XYZAddToDoItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZAddToDoItemViewController.m; sourceTree = "<group>"; };
+		B0EFD1C818B7BF2400511310 /* XYZToDoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZToDoListViewController.h; sourceTree = "<group>"; };
+		B0EFD1C918B7BF2400511310 /* XYZToDoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZToDoListViewController.m; sourceTree = "<group>"; };
+		B0FFEB2218BB02F200CA5074 /* XYZToDoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZToDoItem.h; sourceTree = "<group>"; };
+		B0FFEB2318BB02F200CA5074 /* XYZToDoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZToDoItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +123,12 @@
 				B0EFD19E18B7127E00511310 /* Images.xcassets */,
 				B0EFD19318B7127E00511310 /* Supporting Files */,
 				B0EFD1BD18B7190200511310 /* Main.storyboard */,
+				B0EFD1BF18B7BD1B00511310 /* XYZAddToDoItemViewController.h */,
+				B0EFD1C018B7BD1B00511310 /* XYZAddToDoItemViewController.m */,
+				B0EFD1C818B7BF2400511310 /* XYZToDoListViewController.h */,
+				B0EFD1C918B7BF2400511310 /* XYZToDoListViewController.m */,
+				B0FFEB2218BB02F200CA5074 /* XYZToDoItem.h */,
+				B0FFEB2318BB02F200CA5074 /* XYZToDoItem.m */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -245,7 +260,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0EFD19D18B7127E00511310 /* XYZAppDelegate.m in Sources */,
+				B0FFEB2418BB02F200CA5074 /* XYZToDoItem.m in Sources */,
 				B0EFD19918B7127E00511310 /* main.m in Sources */,
+				B0EFD1CA18B7BF2400511310 /* XYZToDoListViewController.m in Sources */,
+				B0EFD1C118B7BD1B00511310 /* XYZAddToDoItemViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +464,7 @@
 				B0EFD1B718B7127E00511310 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0EFD1B818B7127E00511310 /* Build configuration list for PBXNativeTarget "ToDoListTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +473,7 @@
 				B0EFD1BA18B7127E00511310 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

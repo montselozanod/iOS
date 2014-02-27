@@ -31,7 +31,15 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+        self.tituloLabel.text = [self.detailItem titulo];
+        self.isbnLabel.text = [NSString stringWithFormat:@"%lli", [self.detailItem isbn]];
+        self.cantidadLabel.text = [NSString stringWithFormat:@"%d", [self.detailItem cantidad]];
+        
+        NSURL *url = [NSURL URLWithString:[self.detailItem urlImage]];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        [self.imagenWebView loadRequest:request];
+        
+        
     }
 }
 

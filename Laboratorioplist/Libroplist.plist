@@ -4,27 +4,27 @@
 <array>
 	<dict>
 		<key>titulo</key>
-		<string>ios programming book</string>
+		<string>ios programming cookbook</string>
 		<key>isbn</key>
-		<string></string>
+		<string>9781449372422</string>
 		<key>cantidad</key>
-		<integer>0</integer>
+		<integer>3</integer>
 	</dict>
 	<dict>
 		<key>titulo</key>
-		<string></string>
+		<string>Beginning iOS 4 Application Development</string>
 		<key>isbn</key>
-		<string></string>
+		<string>9780470918029</string>
 		<key>cantidad</key>
-		<integer>0</integer>
+		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>titulo</key>
-		<string></string>
+		<string>iPhone iOS 6</string>
 		<key>isbn</key>
-		<string></string>
+		<string>9781479211418</string>
 		<key>cantidad</key>
-		<integer>0</integer>
+		<integer>2</integer>
 	</dict>
 </array>
 </plist>

@@ -9,9 +9,10 @@
 #import "plistMasterViewController.h"
 
 #import "plistDetailViewController.h"
+#import "Libro.h"
 
 @interface plistMasterViewController () {
-    NSMutableArray *_objects;
+    NSMutableArray *libros;
 }
 @end
 
@@ -33,6 +34,11 @@
     //arreglo de diccionarios
     NSMutableArray *misLibros = [NSMutableArray arrayWithContentsOfFile:path];
     
+    for(int i = 0; i < misLibros.count; i++){
+    
+        [self insertNewObject:[misLibros objectAtIndex:i]];
+    }
+    
 }
 
 - (void)viewDidLoad
@@ -53,12 +59,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+//recibe en sender el diccionario que mando en carga
 - (void)insertNewObject:(id)sender
 {
-    if (!_objects) {
-        _objects = [[NSMutableArray alloc] init];
+    if (!libros) {
+        libros = [[NSMutableArray alloc] init];
     }
-    [_objects insertObject:[NSDate date] atIndex:0];
+    [libros insertObject: sender atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
@@ -72,15 +79,22 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    return libros.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    
+    //NSDate *object = libros[indexPath.row];
+    
+    NSDictionary *miDiccionario = libros[indexPath.row];
+    
+    Libro *object = [[Libro alloc]initWithTitle:[miDiccionario objectForKey: @"titulo"] isbn:[[miDiccionario objectForKey: @"isbn"] longLongValue] cantidad:[[miDiccionario objectForKey: @"cantidad"] integerValue] urlImage: [[NSString alloc]initWithFormat:@"http://content-3.powells.com/cgi-bin/imageDB.cgi?isbn=%@", [miDiccionario objectForKey:@"isbn"]]];
+    
+    cell.textLabel.text = object.titulo;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%lli", object.isbn];
     return cell;
 }
 
@@ -93,7 +107,7 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [_objects removeObjectAtIndex:indexPath.row];
+        [libros removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
@@ -120,7 +134,11 @@
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _objects[indexPath.row];
+        
+        NSDictionary *miDiccionario = libros[indexPath.row];
+        
+        Libro *object = [[Libro alloc]initWithTitle:[miDiccionario objectForKey: @"titulo"] isbn:[[miDiccionario objectForKey: @"isbn"] longLongValue] cantidad:[[miDiccionario objectForKey: @"cantidad"] integerValue] urlImage: [[NSString alloc]initWithFormat:@"http://content-3.powells.com/cgi-bin/imageDB.cgi?isbn=%@", [miDiccionario objectForKey:@"isbn"]]];
+        
         [[segue destinationViewController] setDetailItem:object];
     }
 }

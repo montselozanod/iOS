@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Libro.h"
 
 @interface plistDetailViewController : UIViewController
 

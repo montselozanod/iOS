@@ -32,14 +32,14 @@
     /*UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;*/
     
+    libros = [[NSMutableArray alloc] init]; //inicializar el arreglo de libros
+    
     NSArray *misTitulos = [[NSArray alloc] initWithObjects:@"Libro 1", @"Libro 2", @"Libro 3", nil];
-    NSArray *misISBN = [[NSArray alloc] initWithObjects:@"97804470018029", @"9781479211418", @"9781449372422", nil];
+    NSArray *misISBN = [[NSArray alloc] initWithObjects:@"9781449372422", @"9780470918029", @"9781479211418", nil];
     NSArray *misFechas = [[NSArray alloc] initWithObjects:@"23 may 2012", @"10 feb 2000", @"1 dic 1999", nil];
     
     
     for(int i = 0; i < misTitulos.count; i++){
-        
-        
     
         NSDictionary *diccionario = [[NSDictionary alloc] initWithObjectsAndKeys: [misTitulos objectAtIndex:i], @"titulo", [misISBN objectAtIndex:i], @"isbn", [misFechas objectAtIndex:i], @"fecha", nil];
         [libros addObject:diccionario];
@@ -79,6 +79,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     LibrosCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
     NSDictionary *object = libros[indexPath.row];
@@ -86,7 +87,7 @@
     cell.isbnCell.text =[object objectForKey:@"isbn"];
     cell.fechaCell.text = [object objectForKey:@"fecha"];
     
-    NSString *stringURL = [[NSString alloc]initWithFormat:@"http://content-3.powells.com/cgi-bim/imageDB.cgi?isbn=%@", [object objectForKey:@"isbn"]];
+    NSString *stringURL = [[NSString alloc]initWithFormat:@"http://content-3.powells.com/cgi-bin/imageDB.cgi?isbn=%@", [object objectForKey:@"isbn"]];
     NSURL *url = [[NSURL alloc] initWithString: stringURL];
 
     NSURLRequest *request = [NSURLRequest requestWithURL:url];

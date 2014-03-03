@@ -35,7 +35,7 @@
         self.isbnDetail.text = [self.detailItem objectForKey:@"isbn"];
         self.fechaDetail.text = [self.detailItem objectForKey:@"fecha"];
        
-    NSString *stringURL = [[NSString alloc]initWithFormat:@"http://content-3.powells.com/cgi-bim/imageDB.cgi?isbn=%@", [self.detailItem objectForKey:@"isbn"]];
+    NSString *stringURL = [[NSString alloc]initWithFormat:@"http://content-3.powells.com/cgi-bin/imageDB.cgi?isbn=%@", [self.detailItem objectForKey:@"isbn"]];
         NSURL *url = [[NSURL alloc] initWithString: stringURL];
         
         NSURLRequest *request = [NSURLRequest requestWithURL:url];

@@ -31,7 +31,17 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+       self.tituloDetail.text = [self.detailItem objectForKey:@"titulo"];
+        self.isbnDetail.text = [self.detailItem objectForKey:@"isbn"];
+        self.fechaDetail.text = [self.detailItem objectForKey:@"fecha"];
+       
+    NSString *stringURL = [[NSString alloc]initWithFormat:@"http://content-3.powells.com/cgi-bim/imageDB.cgi?isbn=%@", [self.detailItem objectForKey:@"isbn"]];
+        NSURL *url = [[NSURL alloc] initWithString: stringURL];
+        
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        
+        [self.imagenDetail loadRequest:request];
+        
     }
 }
 

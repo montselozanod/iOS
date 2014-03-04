@@ -23,6 +23,24 @@
     [super awakeFromNib];
 }
 
+- (void) cargaLibrosPlist{
+    
+    //te dice path de acceso al archivo de la aplicación
+    NSBundle *miBundle = [NSBundle mainBundle];
+    //ahora tienes que decir que te traiga archivo plist
+    
+    NSString *path = [miBundle pathForResource:@"Libroplist" ofType:@"plist" ];
+    
+    //arreglo de diccionarios
+    NSMutableArray *misLibros = [NSMutableArray arrayWithContentsOfFile:path];
+    
+    for(int i = 0; i < misLibros.count; i++){
+        
+        [libros addObject:[misLibros objectAtIndex:i]];
+    }
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -34,7 +52,10 @@
     
     libros = [[NSMutableArray alloc] init]; //inicializar el arreglo de libros
     
-    NSArray *misTitulos = [[NSArray alloc] initWithObjects:@"Libro 1", @"Libro 2", @"Libro 3", nil];
+    
+    [self cargaLibrosPlist];
+    
+    /*NSArray *misTitulos = [[NSArray alloc] initWithObjects:@"Libro 1", @"Libro 2", @"Libro 3", nil];
     NSArray *misISBN = [[NSArray alloc] initWithObjects:@"9781449372422", @"9780470918029", @"9781479211418", nil];
     NSArray *misFechas = [[NSArray alloc] initWithObjects:@"23 may 2012", @"10 feb 2000", @"1 dic 1999", nil];
     
@@ -43,7 +64,7 @@
     
         NSDictionary *diccionario = [[NSDictionary alloc] initWithObjectsAndKeys: [misTitulos objectAtIndex:i], @"titulo", [misISBN objectAtIndex:i], @"isbn", [misFechas objectAtIndex:i], @"fecha", nil];
         [libros addObject:diccionario];
-    }
+    }*/
     
     
     
@@ -77,12 +98,15 @@
     return libros.count;
 }
 
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
     LibrosCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
     NSDictionary *object = libros[indexPath.row];
+    
     cell.tituloCell.text = [object objectForKey:@"titulo"];
     cell.isbnCell.text =[object objectForKey:@"isbn"];
     cell.fechaCell.text = [object objectForKey:@"fecha"];

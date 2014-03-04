@@ -23,6 +23,7 @@
 		B0687CAB18C4EBFF003D229F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0687CA918C4EBFF003D229F /* InfoPlist.strings */; };
 		B0687CAD18C4EBFF003D229F /* LaboratorioLibrosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0687CAC18C4EBFF003D229F /* LaboratorioLibrosTests.m */; };
 		B0687CB818C4EEBC003D229F /* LibrosCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0687CB718C4EEBC003D229F /* LibrosCell.m */; };
+		B0687CBD18C52C12003D229F /* Libroplist.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0687CBC18C52C12003D229F /* Libroplist.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		B0687CAC18C4EBFF003D229F /* LaboratorioLibrosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaboratorioLibrosTests.m; sourceTree = "<group>"; };
 		B0687CB618C4EEBC003D229F /* LibrosCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibrosCell.h; sourceTree = "<group>"; };
 		B0687CB718C4EEBC003D229F /* LibrosCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibrosCell.m; sourceTree = "<group>"; };
+		B0687CBC18C52C12003D229F /* Libroplist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Libroplist.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 		B0687C8418C4EBFF003D229F /* LaboratorioLibros */ = {
 			isa = PBXGroup;
 			children = (
+				B0687CBC18C52C12003D229F /* Libroplist.plist */,
 				B0687C8D18C4EBFF003D229F /* LibrosAppDelegate.h */,
 				B0687C8E18C4EBFF003D229F /* LibrosAppDelegate.m */,
 				B0687C9018C4EBFF003D229F /* Main.storyboard */,
@@ -265,6 +268,7 @@
 			files = (
 				B0687C9A18C4EBFF003D229F /* Images.xcassets in Resources */,
 				B0687C8918C4EBFF003D229F /* InfoPlist.strings in Resources */,
+				B0687CBD18C52C12003D229F /* Libroplist.plist in Resources */,
 				B0687C9218C4EBFF003D229F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,6 +501,7 @@
 				B0687CB218C4EBFF003D229F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0687CB318C4EBFF003D229F /* Build configuration list for PBXNativeTarget "LaboratorioLibrosTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +510,7 @@
 				B0687CB518C4EBFF003D229F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

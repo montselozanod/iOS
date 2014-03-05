@@ -19,10 +19,10 @@
             </objects>
             <point key="canvasLocation" x="-269" y="40"/>
         </scene>
-        <!--View Controller-->
+        <!--Libros Buscar View Controller-->
         <scene sceneID="aFG-7z-Uxb">
             <objects>
-                <viewController id="DuI-3k-asj" sceneMemberID="viewController">
+                <viewController id="DuI-3k-asj" customClass="LibrosBuscarViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F1J-UC-yae"/>
                         <viewControllerLayoutGuide type="bottom" id="oav-oU-8yL"/>
@@ -51,13 +51,16 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="pGg-6v-bdr" kind="push" id="OCX-6D-XCJ"/>
+                                    <segue destination="pGg-6v-bdr" kind="push" identifier="buscar" id="OCX-6D-XCJ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="v4u-OX-PTJ"/>
+                    <connections>
+                        <outlet property="buscarTF" destination="qbf-u4-g2N" id="7lF-3N-ttr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bmM-nz-pdX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

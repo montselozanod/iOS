@@ -24,6 +24,7 @@
 		B0687CAD18C4EBFF003D229F /* LaboratorioLibrosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0687CAC18C4EBFF003D229F /* LaboratorioLibrosTests.m */; };
 		B0687CB818C4EEBC003D229F /* LibrosCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0687CB718C4EEBC003D229F /* LibrosCell.m */; };
 		B0687CBD18C52C12003D229F /* Libroplist.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0687CBC18C52C12003D229F /* Libroplist.plist */; };
+		B0D3971C18C78BED00FC3D42 /* LibrosBuscarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D3971B18C78BED00FC3D42 /* LibrosBuscarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		B0687CB618C4EEBC003D229F /* LibrosCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibrosCell.h; sourceTree = "<group>"; };
 		B0687CB718C4EEBC003D229F /* LibrosCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibrosCell.m; sourceTree = "<group>"; };
 		B0687CBC18C52C12003D229F /* Libroplist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Libroplist.plist; sourceTree = "<group>"; };
+		B0D3971A18C78BED00FC3D42 /* LibrosBuscarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibrosBuscarViewController.h; sourceTree = "<group>"; };
+		B0D3971B18C78BED00FC3D42 /* LibrosBuscarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibrosBuscarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,7 @@
 				B0687CBC18C52C12003D229F /* Libroplist.plist */,
 				B0687C8D18C4EBFF003D229F /* LibrosAppDelegate.h */,
 				B0687C8E18C4EBFF003D229F /* LibrosAppDelegate.m */,
+				B0D3971D18C78BF400FC3D42 /* Buscar */,
 				B0687C9018C4EBFF003D229F /* Main.storyboard */,
 				B0687CB918C4EECD003D229F /* Celda */,
 				B0687CBA18C4EEDD003D229F /* TableViewController */,
@@ -187,6 +191,15 @@
 				B0687C9718C4EBFF003D229F /* LibrosDetailViewController.m */,
 			);
 			name = "Libro Detalle";
+			sourceTree = "<group>";
+		};
+		B0D3971D18C78BF400FC3D42 /* Buscar */ = {
+			isa = PBXGroup;
+			children = (
+				B0D3971A18C78BED00FC3D42 /* LibrosBuscarViewController.h */,
+				B0D3971B18C78BED00FC3D42 /* LibrosBuscarViewController.m */,
+			);
+			name = Buscar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0687C9818C4EBFF003D229F /* LibrosDetailViewController.m in Sources */,
+				B0D3971C18C78BED00FC3D42 /* LibrosBuscarViewController.m in Sources */,
 				B0687C8B18C4EBFF003D229F /* main.m in Sources */,
 				B0687C9518C4EBFF003D229F /* LibrosMasterViewController.m in Sources */,
 				B0687C8F18C4EBFF003D229F /* LibrosAppDelegate.m in Sources */,

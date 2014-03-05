@@ -10,4 +10,6 @@
 
 @interface LibrosMasterViewController : UITableViewController
 
+@property (strong, nonatomic) NSString *palabraClave;
+
 @end

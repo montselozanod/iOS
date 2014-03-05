@@ -23,6 +23,24 @@
     [super awakeFromNib];
 }
 
+- (void) cargarDatosServicioWeb{
+
+}
+
+- (void) cargarDatosManual{
+
+    NSArray *misTitulos = [[NSArray alloc] initWithObjects:@"Libro 1", @"Libro 2", @"Libro 3", nil];
+     NSArray *misISBN = [[NSArray alloc] initWithObjects:@"9781449372422", @"9780470918029", @"9781479211418", nil];
+     NSArray *misFechas = [[NSArray alloc] initWithObjects:@"23 may 2012", @"10 feb 2000", @"1 dic 1999", nil];
+     
+     
+     for(int i = 0; i < misTitulos.count; i++){
+     
+     NSDictionary *diccionario = [[NSDictionary alloc] initWithObjectsAndKeys: [misTitulos objectAtIndex:i], @"titulo", [misISBN objectAtIndex:i], @"isbn", [misFechas objectAtIndex:i], @"fecha", nil];
+     [libros addObject:diccionario];
+     }
+}
+
 - (void) cargaLibrosPlist{
     
     //te dice path de acceso al archivo de la aplicación
@@ -53,18 +71,9 @@
     libros = [[NSMutableArray alloc] init]; //inicializar el arreglo de libros
     
     
-    [self cargaLibrosPlist];
+    //[self cargaLibrosPlist];
     
-    /*NSArray *misTitulos = [[NSArray alloc] initWithObjects:@"Libro 1", @"Libro 2", @"Libro 3", nil];
-    NSArray *misISBN = [[NSArray alloc] initWithObjects:@"9781449372422", @"9780470918029", @"9781479211418", nil];
-    NSArray *misFechas = [[NSArray alloc] initWithObjects:@"23 may 2012", @"10 feb 2000", @"1 dic 1999", nil];
-    
-    
-    for(int i = 0; i < misTitulos.count; i++){
-    
-        NSDictionary *diccionario = [[NSDictionary alloc] initWithObjectsAndKeys: [misTitulos objectAtIndex:i], @"titulo", [misISBN objectAtIndex:i], @"isbn", [misFechas objectAtIndex:i], @"fecha", nil];
-        [libros addObject:diccionario];
-    }*/
+   
     
     
     

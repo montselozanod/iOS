@@ -13,6 +13,7 @@
 
 @interface LibrosMasterViewController () {
     NSMutableArray *libros;
+    
 }
 @end
 
@@ -25,6 +26,20 @@
 
 - (void) cargarDatosServicioWeb{
 
+    NSString *stringURL= [[NSString alloc]initWithFormat:@"https://www.googleapis.com/books/v1/volumes?q=%@", self.palabraClave];
+    NSURL *url = [[NSURL alloc]initWithString:stringURL];
+    NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:60];
+    //timeout es en segundos
+    
+    //empezar la conexion al servicio web
+    self.conexion = [[NSURLConnection alloc]initWithRequest:request delegate:self];
+    
+    //NSDATA es un conjunto de bytes (de cualquier tipo de archivo) que estas recibiendo de servidor
+    
+   self.responseData = [[NSMutableData alloc] init];
+    
+    
+    
 }
 
 - (void) cargarDatosManual{
@@ -73,9 +88,23 @@
     
     //[self cargaLibrosPlist];
     
+    [self cargarDatosServicioWeb];
+    
+    UITapGestureRecognizer *tap =   [[UITapGestureRecognizer alloc]
+                                     initWithTarget:self
+                                     action:@selector(quitarTeclado)];
+    
+    [self.view addGestureRecognizer:tap];
+    
    
     
     
+    
+}
+
+-(void)quitarTeclado {
+    
+    [self.view endEditing:YES];
     
 }
 
@@ -108,12 +137,13 @@
 }
 
 
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+/*
+ //version anterior
+ - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
     LibrosCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
+    
     NSDictionary *object = libros[indexPath.row];
     
     cell.tituloCell.text = [object objectForKey:@"titulo"];
@@ -121,6 +151,34 @@
     cell.fechaCell.text = [object objectForKey:@"fecha"];
     
     NSString *stringURL = [[NSString alloc]initWithFormat:@"http://content-3.powells.com/cgi-bin/imageDB.cgi?isbn=%@", [object objectForKey:@"isbn"]];
+    NSURL *url = [[NSURL alloc] initWithString: stringURL];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    [cell.imagenCell loadRequest:request];
+    
+    
+    return cell;
+}*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    LibrosCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    NSDictionary *diccionarioItems = libros[indexPath.row];
+    NSDictionary *diccionarioVolumInfo = [diccionarioItems objectForKey: @"volumeInfor"];
+    
+    
+    
+    cell.tituloCell.text = [diccionarioVolumInfo objectForKey:@"title"];
+   
+    cell.isbnCell.text =[[[diccionarioVolumInfo objectForKey:@"industryIdentifiers"] objectAtIndex:0] objectForKey:@"identifier"];
+    
+    cell.fechaCell.text = [diccionarioVolumInfo objectForKey:@"publishedDate"];
+    
+    NSString *stringURL = [[NSString alloc]initWithFormat:@"http://content-3.powells.com/cgi-bin/imageDB.cgi?isbn=%@", cell.isbnCell.text];
+    
     NSURL *url = [[NSURL alloc] initWithString: stringURL];
 
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -170,6 +228,47 @@
         NSDictionary *object = libros[indexPath.row];
         [[segue destinationViewController] setDetailItem:object];
     }
+}
+
+//es asincrono en la misma thread...todo sobre main thread
+
+#pragma mark - NSURLConnectionDataDelegate
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+{
+    //estar recibiendo y formando la respuesta del servidor
+    [self.responseData appendData:data];
+
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
+
+    NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+    int statusCode = [httpResponse statusCode];
+    
+    NSLog(@"status code: %d", statusCode);
+    
+    [self.responseData setLength:0];
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    NSError *error;
+    NSDictionary *datos = [NSJSONSerialization JSONObjectWithData:self.responseData options:kNilOptions error: &error];
+    
+    if(!libros)
+        libros = [[NSMutableArray alloc] init];
+    
+    libros = [datos objectForKey:@"items"];
+    
+    [self.tableView reloadData]; //recargar vista de tableview
+    
+}
+
+#pragma mark - NSURLConnectionDelegate
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
+
 }
 
 @end

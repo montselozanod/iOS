@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LibrosMasterViewController : UITableViewController
+@interface LibrosMasterViewController : UITableViewController <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
 
 @property (strong, nonatomic) NSString *palabraClave;
+
+//empezar la conexion al servicio web
+@property NSURLConnection *conexion;
+
+//NSDATA es un conjunto de bytes (de cualquier tipo de archivo) que estas recibiendo de servidor
+
+@property NSMutableData *responseData;
 
 @end

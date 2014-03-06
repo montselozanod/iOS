@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>titulo</key>
+		<string>ios programming cookbook</string>
+		<key>isbn</key>
+		<string>9781449372422</string>
+		<key>cantidad</key>
+		<string>3</string>
+		<key>fecha</key>
+		<string>23 may 2012</string>
+	</dict>
+	<dict>
+		<key>titulo</key>
+		<string>Beginning iOS 4 Application Development</string>
+		<key>isbn</key>
+		<string>9780470918029</string>
+		<key>cantidad</key>
+		<string>1</string>
+		<key>fecha</key>
+		<string>14 dic 2010</string>
+	</dict>
+	<dict>
+		<key>titulo</key>
+		<string>iPhone iOS 6</string>
+		<key>isbn</key>
+		<string>9781479211418</string>
+		<key>cantidad</key>
+		<string>2</string>
+		<key>fecha</key>
+		<string>19 may 1999</string>
+	</dict>
+</array>
+</plist>

@@ -31,14 +31,18 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
-       self.tituloDetail.text = [self.detailItem objectForKey:@"titulo"];
-        self.isbnDetail.text = [self.detailItem objectForKey:@"isbn"];
-        self.fechaDetail.text = [self.detailItem objectForKey:@"fecha"];
+        
+         NSDictionary *diccionarioVolumInfo = [self.detailItem objectForKey: @"volumeInfo"];
+        
+        
+       self.tituloDetail.text = [diccionarioVolumInfo objectForKey:@"title"];
+        self.isbnDetail.text = [[[diccionarioVolumInfo objectForKey:@"industryIdentifiers"] objectAtIndex:0] objectForKey:@"identifier"];
+        self.fechaDetail.text = [diccionarioVolumInfo objectForKey:@"publishedDate"];
 
         
         self.cantidadDetail.text = [self.detailItem objectForKey:@"cantidad"];
        
-    NSString *stringURL = [[NSString alloc]initWithFormat:@"http://content-3.powells.com/cgi-bin/imageDB.cgi?isbn=%@", [self.detailItem objectForKey:@"isbn"]];
+    NSString *stringURL = [[NSString alloc]initWithFormat:@"http://content-3.powells.com/cgi-bin/imageDB.cgi?isbn=%@", self.isbnDetail.text];
         NSURL *url = [[NSURL alloc] initWithString: stringURL];
         
         NSURLRequest *request = [NSURLRequest requestWithURL:url];

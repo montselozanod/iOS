@@ -90,23 +90,10 @@
     
     [self cargarDatosServicioWeb];
     
-    UITapGestureRecognizer *tap =   [[UITapGestureRecognizer alloc]
-                                     initWithTarget:self
-                                     action:@selector(quitarTeclado)];
-    
-    [self.view addGestureRecognizer:tap];
-    
-   
-    
-    
     
 }
 
--(void)quitarTeclado {
-    
-    [self.view endEditing:YES];
-    
-}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -167,7 +154,7 @@
     LibrosCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     NSDictionary *diccionarioItems = libros[indexPath.row];
-    NSDictionary *diccionarioVolumInfo = [diccionarioItems objectForKey: @"volumeInfor"];
+    NSDictionary *diccionarioVolumInfo = [diccionarioItems objectForKey: @"volumeInfo"];
     
     
     

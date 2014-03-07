@@ -28,6 +28,18 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    UITapGestureRecognizer *tap =   [[UITapGestureRecognizer alloc]
+                                     initWithTarget:self
+                                     action:@selector(quitarTeclado)];
+    
+    [self.view addGestureRecognizer:tap];
+}
+
+-(void)quitarTeclado {
+    
+    [self.view endEditing:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning

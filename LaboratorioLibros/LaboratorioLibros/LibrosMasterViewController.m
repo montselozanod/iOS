@@ -254,8 +254,14 @@
 
 #pragma mark - NSURLConnectionDelegate
 
+//falla de internet invoca a metodo didFailWithError
+
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
 
+    UIAlertView *alert= [[UIAlertView alloc] initWithTitle: [error localizedDescription] message: [error localizedFailureReason] delegate:nil                  cancelButtonTitle:@"Done" otherButtonTitles:nil];
+    [alert show];
+    
+    NSLog (@"Falla conexión");
 }
 
 @end

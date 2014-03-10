@@ -87,6 +87,7 @@
     
     
     //[self cargaLibrosPlist];
+
     
     [self cargarDatosServicioWeb];
     
@@ -229,7 +230,10 @@
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
-
+    
+    [self.indicador startAnimating];
+    self.indicador.hidesWhenStopped = YES;
+    
     NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
     int statusCode = [httpResponse statusCode];
     
@@ -240,6 +244,8 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
+    [self.indicador stopAnimating];
+    
     NSError *error;
     NSDictionary *datos = [NSJSONSerialization JSONObjectWithData:self.responseData options:kNilOptions error: &error];
     

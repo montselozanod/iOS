@@ -19,4 +19,7 @@
 
 @property NSMutableData *responseData;
 
+
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicador;
+
 @end

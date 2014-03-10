@@ -74,6 +74,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="m4I-Gh-dEe">
+                            <rect key="frame" x="0.0" y="174" width="320" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="88" id="m0d-ak-lc9" customClass="LibrosCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="88"/>
@@ -124,6 +128,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Libros" id="tQt-TN-PWz"/>
+                    <connections>
+                        <outlet property="indicador" destination="m4I-Gh-dEe" id="8s9-at-hNf"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>

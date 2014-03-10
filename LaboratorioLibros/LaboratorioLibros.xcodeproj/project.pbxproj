@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B014541218CD76D5000203A5 /* LibrosInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B014541118CD76D5000203A5 /* LibrosInfoViewController.m */; };
 		B0687C7F18C4EBFF003D229F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0687C7E18C4EBFF003D229F /* Foundation.framework */; };
 		B0687C8118C4EBFF003D229F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0687C8018C4EBFF003D229F /* CoreGraphics.framework */; };
 		B0687C8318C4EBFF003D229F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0687C8218C4EBFF003D229F /* UIKit.framework */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B014541018CD76D5000203A5 /* LibrosInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibrosInfoViewController.h; sourceTree = "<group>"; };
+		B014541118CD76D5000203A5 /* LibrosInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibrosInfoViewController.m; sourceTree = "<group>"; };
 		B0687C7B18C4EBFF003D229F /* LaboratorioLibros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaboratorioLibros.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0687C7E18C4EBFF003D229F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B0687C8018C4EBFF003D229F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -90,6 +93,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B014541318CD76DC000203A5 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				B014541018CD76D5000203A5 /* LibrosInfoViewController.h */,
+				B014541118CD76D5000203A5 /* LibrosInfoViewController.m */,
+			);
+			name = Info;
+			sourceTree = "<group>";
+		};
 		B0687C7218C4EBFF003D229F = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +137,7 @@
 			children = (
 				B0687CBC18C52C12003D229F /* Libroplist.plist */,
 				B0687C8D18C4EBFF003D229F /* LibrosAppDelegate.h */,
+				B014541318CD76DC000203A5 /* Info */,
 				B0687C8E18C4EBFF003D229F /* LibrosAppDelegate.m */,
 				B0D3971D18C78BF400FC3D42 /* Buscar */,
 				B0687C9018C4EBFF003D229F /* Main.storyboard */,
@@ -304,6 +317,7 @@
 				B0687C9818C4EBFF003D229F /* LibrosDetailViewController.m in Sources */,
 				B0D3971C18C78BED00FC3D42 /* LibrosBuscarViewController.m in Sources */,
 				B0687C8B18C4EBFF003D229F /* main.m in Sources */,
+				B014541218CD76D5000203A5 /* LibrosInfoViewController.m in Sources */,
 				B0687C9518C4EBFF003D229F /* LibrosMasterViewController.m in Sources */,
 				B0687C8F18C4EBFF003D229F /* LibrosAppDelegate.m in Sources */,
 				B0687CB818C4EEBC003D229F /* LibrosCell.m in Sources */,

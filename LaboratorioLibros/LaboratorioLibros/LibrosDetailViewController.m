@@ -65,4 +65,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"info"]) {
+        
+        [[segue destinationViewController] setDetailItem:self.detailItem];
+    }
+}
+
 @end

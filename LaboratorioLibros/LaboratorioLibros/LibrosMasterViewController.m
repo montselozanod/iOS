@@ -39,6 +39,9 @@
     //empezar la conexion al servicio web
     self.conexion = [[NSURLConnection alloc]initWithRequest:request delegate:self];
     
+    [self.indicador startAnimating];
+    self.indicador.hidesWhenStopped = YES;
+    
     //NSDATA es un conjunto de bytes (de cualquier tipo de archivo) que estas recibiendo de servidor
     
    self.responseData = [[NSMutableData alloc] init];
@@ -236,8 +239,6 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
     
-    [self.indicador startAnimating];
-    self.indicador.hidesWhenStopped = YES;
     
     NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
     int statusCode = [httpResponse statusCode];
@@ -272,7 +273,7 @@
     if([libros count] == 0){
         
         UIAlertView *alert= [[UIAlertView alloc] initWithTitle: @"Búsqueda"
-                                                message: @"La búsqueda no regresí resultados. Intenta de nuevo."
+                                                message: @"La búsqueda no regresó resultados. Intenta de nuevo."
                                                 delegate:nil
                                                 cancelButtonTitle:@"OK"
                                                 otherButtonTitles:nil];

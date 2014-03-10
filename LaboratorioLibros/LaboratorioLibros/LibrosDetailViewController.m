@@ -40,7 +40,9 @@
         self.fechaDetail.text = [diccionarioVolumInfo objectForKey:@"publishedDate"];
 
         
-        self.cantidadDetail.text = [self.detailItem objectForKey:@"cantidad"];
+        NSString *pages =[NSString stringWithFormat:@"%@", [diccionarioVolumInfo objectForKey:@"pageCount"]];
+    
+        self.cantidadDetail.text = pages;
        
     NSString *stringURL = [[NSString alloc]initWithFormat:@"http://content-3.powells.com/cgi-bin/imageDB.cgi?isbn=%@", self.isbnDetail.text];
         NSURL *url = [[NSURL alloc] initWithString: stringURL];

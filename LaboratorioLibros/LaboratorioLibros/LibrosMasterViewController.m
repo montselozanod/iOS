@@ -30,6 +30,7 @@
 
     NSLog(@"%@", self.palabraClave);
     NSLog(@"%@",palabras);
+    //NSString *stringURL= [[NSString alloc]initWithFormat:@"httpsa://a%@", palabras];
     
     NSString *stringURL= [[NSString alloc]initWithFormat:@"https://www.googleapis.com/books/v1/volumes?q=%@", palabras];
     NSURL *url = [[NSURL alloc]initWithString:stringURL];
@@ -243,16 +244,6 @@
     NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
     int statusCode = [httpResponse statusCode];
     
-    if(statusCode != 200){
-    
-        UIAlertView *alert= [[UIAlertView alloc] initWithTitle: @"Servicio Web"
-                                                       message: @"El Servicio web está caído. Intenta más tarde."
-                                                      delegate:nil
-                                             cancelButtonTitle:@"OK"
-                                             otherButtonTitles:nil];
-        [alert show];
-    }
-    
     NSLog(@"status code: %d", statusCode);
     
     [self.responseData setLength:0];
@@ -272,7 +263,7 @@
     
     if([libros count] == 0){
         
-        UIAlertView *alert= [[UIAlertView alloc] initWithTitle: @"Búsqueda"
+        UIAlertView *alert= [[UIAlertView alloc] initWithTitle: @"Error"
                                                 message: @"La búsqueda no regresó resultados. Intenta de nuevo."
                                                 delegate:nil
                                                 cancelButtonTitle:@"OK"
@@ -291,7 +282,11 @@
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
 
-    UIAlertView *alert= [[UIAlertView alloc] initWithTitle: [error localizedDescription] message: [error localizedFailureReason] delegate:nil                  cancelButtonTitle:@"Done" otherButtonTitles:nil];
+    UIAlertView *alert= [[UIAlertView alloc] initWithTitle: [error localizedDescription]
+                                            message: [error localizedFailureReason]
+                                            delegate:nil
+                                            cancelButtonTitle:@"OK"
+                                            otherButtonTitles:nil];
     [alert show];
     
     NSLog (@"Falla conexión");

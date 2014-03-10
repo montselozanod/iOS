@@ -25,8 +25,13 @@
 }
 
 - (void) cargarDatosServicioWeb{
+    
+    NSString *palabras = [self.palabraClave stringByReplacingOccurrencesOfString:@" " withString:@"+"];
 
-    NSString *stringURL= [[NSString alloc]initWithFormat:@"https://www.googleapis.com/books/v1/volumes?q=%@", self.palabraClave];
+    NSLog(@"%@", self.palabraClave);
+    NSLog(@"%@",palabras);
+    
+    NSString *stringURL= [[NSString alloc]initWithFormat:@"https://www.googleapis.com/books/v1/volumes?q=%@", palabras];
     NSURL *url = [[NSURL alloc]initWithString:stringURL];
     NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:60];
     //timeout es en segundos
@@ -267,7 +272,7 @@
     if([libros count] == 0){
         
         UIAlertView *alert= [[UIAlertView alloc] initWithTitle: @"Búsqueda"
-                                                message: @"La búsqueda no regreso resultados. Intenta de Nuevo."
+                                                message: @"La búsqueda no regresí resultados. Intenta de nuevo."
                                                 delegate:nil
                                                 cancelButtonTitle:@"OK"
                                                 otherButtonTitles:nil];

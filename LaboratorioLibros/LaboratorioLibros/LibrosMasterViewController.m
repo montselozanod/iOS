@@ -254,6 +254,17 @@
     
     libros = [datos objectForKey:@"items"];
     
+    if([libros count] == 0){
+        
+        UIAlertView *alert= [[UIAlertView alloc] initWithTitle: @"Búsqueda"
+                                                message: @"La búsqueda no regreso resultados. Intenta de Nuevo."
+                                                delegate:nil
+                                                cancelButtonTitle:@"OK"
+                                                otherButtonTitles:nil];
+        [alert show];
+    
+    }
+    
     [self.tableView reloadData]; //recargar vista de tableview
     
 }

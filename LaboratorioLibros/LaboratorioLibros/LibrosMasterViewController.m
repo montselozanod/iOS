@@ -237,6 +237,16 @@
     NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
     int statusCode = [httpResponse statusCode];
     
+    if(statusCode != 200){
+    
+        UIAlertView *alert= [[UIAlertView alloc] initWithTitle: @"Servicio Web"
+                                                       message: @"El Servicio web está caído. Intenta más tarde."
+                                                      delegate:nil
+                                             cancelButtonTitle:@"OK"
+                                             otherButtonTitles:nil];
+        [alert show];
+    }
+    
     NSLog(@"status code: %d", statusCode);
     
     [self.responseData setLength:0];

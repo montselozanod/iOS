@@ -242,9 +242,9 @@
     
     
     NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
-    int statusCode = [httpResponse statusCode];
+    long statusCode = [httpResponse statusCode];
     
-    NSLog(@"status code: %d", statusCode);
+    NSLog(@"status code: %li", statusCode);
     
     [self.responseData setLength:0];
 }
@@ -282,9 +282,12 @@
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
 
-    UIAlertView *alert= [[UIAlertView alloc] initWithTitle: [error localizedDescription]
-                                            message: [error localizedFailureReason]
-                                            delegate:nil
+   
+   
+    
+    UIAlertView *alert= [[UIAlertView alloc] initWithTitle: @"Error"
+                                            message: [error localizedDescription]
+                                            delegate:self
                                             cancelButtonTitle:@"OK"
                                             otherButtonTitles:nil];
     [alert show];

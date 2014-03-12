@@ -49,14 +49,75 @@
 
 - (IBAction)registrarButton:(id)sender {
     
-    NSDictionary *diccionario = [[NSDictionary alloc] initWithObjectsAndKeys: self.nombreTF.text,@"nombre", self.emailTF.text, @"email",nil];
     
-    [personas addObject:diccionario];
-    [self.tabla reloadData];
+    if([self.emailTF.text isEqualToString:@""] || [self.nombreTF.text isEqualToString:@""]){
+    
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Debes escribir datos en los dos campos." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        
+        [alert show];
+    
+    
+    }else{
+        
+        NSDictionary *diccionario = [[NSDictionary alloc] initWithObjectsAndKeys: self.nombreTF.text,@"nombre", self.emailTF.text, @"email",nil];
+    
+        [personas addObject:diccionario];
+        [self.tabla reloadData];
+        self.nombreTF.text = @"";
+        self.emailTF.text = @"";
+        
+    }
+    
+}
+
+- (NSString *) dataFilePath{
+
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
+    NSString *filePath;
+    
+    if([paths count] > 0){
+        NSString *dir = [paths objectAtIndex:0];
+        filePath = [dir stringByAppendingString:@"data.plist"];
+        NSLog(@"%@", filePath);
+    }else{
+    
+        NSLog(@"No se pudo");
+        filePath= @"";
+    }
+    
+    return filePath;
     
 }
 
 - (IBAction)guardarButton:(id)sender {
+    
+    NSString *filepath = [self dataFilePath];
+    BOOL success = [personas writeToFile:filepath atomically:YES];
+    
+    if(success){
+        NSLog(@"Archivo fue guardado en %@", filepath);
+    }else{
+        NSLog(@"No se guardo en %@", filepath);
+    }
+}
+
+- (void) cargaDatos{
+
+    NSString *filepath = [self dataFilePath];
+    
+    //si existe archivo los carga al arreglo
+    
+    if([[NSFileManager defaultManager]fileExistsAtPath:filepath]){
+        personas = [[NSMutableArray alloc]initWithContentsOfFile:filepath];
+        
+        if([personas count] > 0){
+            NSLog(@"Se leyo bien el archivo %@", personas);
+        }else{
+            NSLog(@"fallo archivo lectura");
+        }
+    }
+    
+    [self.tabla reloadData];
 }
 
 #pragma mark -TableView

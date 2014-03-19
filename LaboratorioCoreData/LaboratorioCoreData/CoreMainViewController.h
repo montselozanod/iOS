@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MATAppDelegate.h"
 
-@interface CoreMainViewController : UIViewController
+@interface CoreMainViewController : UIViewController 
 
 @property (weak, nonatomic) IBOutlet UITextField *claveTF;
 

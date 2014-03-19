@@ -458,6 +458,7 @@
 				B029366D18DA047900BBB338 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B029366E18DA047900BBB338 /* Build configuration list for PBXNativeTarget "LaboratorioCoreDataTests" */ = {
 			isa = XCConfigurationList;
@@ -466,6 +467,7 @@
 				B029367018DA047900BBB338 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

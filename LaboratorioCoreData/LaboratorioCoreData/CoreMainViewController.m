@@ -28,12 +28,57 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(enterBackground:)
+     name:UIApplicationDidEnterBackgroundNotification
+     object:nil];
+    
+    UITapGestureRecognizer *tap =   [[UITapGestureRecognizer alloc]
+                                     initWithTarget:self
+                                     action:@selector(quitarTeclado)];
+    [self.view addGestureRecognizer:tap];
+}
+
+-(void)quitarTeclado {
+    
+    [self.view endEditing:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)enterBackground:(NSNotification *)notification{
+    
+    
+    //si cuando fue al background ambos campos son diferentes de vacio....se guardan en el core data
+    if(![self.nombreTF.text isEqualToString:@""] && ![self.claveTF.text isEqualToString:@""])
+    {
+        NSLog(@"Se guardaron textfields cuando se fue al background");
+        MATAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+        //hay que crear contexto
+    
+        //delegado de la aplicacion manda a crear el contexto
+        NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    
+        //indicar tabla
+        NSManagedObject *object = [NSEntityDescription insertNewObjectForEntityForName:@"Materia" inManagedObjectContext:context];
+    
+        //poner valores en tabla
+        [object setValue:self.nombreTF.text forKeyPath:@"nombre"];
+        [object setValue:self.claveTF.text forKeyPath:@"clave" ];
+    
+        //guardar
+        [appDelegate saveContext];
+    
+        self.estatusLabel.text = @"Se guardo exitosamente";
+    }else{
+        NSLog(@"faltaron campos por lo que no se guarda");
+    }
 }
 
 /*
@@ -50,7 +95,7 @@
 - (IBAction)guardarButton:(id)sender {
     
     //en app delegate voy a tener al delegado de la aplicacion...es para la aplicacion no para un controlador en especifico.
-    
+    [self quitarTeclado];
     MATAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     //hay que crear contexto
     
@@ -73,6 +118,7 @@
 - (IBAction)buscarButton:(id)sender {
     
     //en app delegate voy a tener al delegado de la aplicacion...es para la aplicacion no para un controlador en especifico.
+    [self quitarTeclado];
     
     MATAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     //hay que crear contexto

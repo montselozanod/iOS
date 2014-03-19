@@ -69,6 +69,7 @@
 
 - (IBAction)registrarButton:(id)sender {
     
+    [self quitarTeclado];
     
     if([self.emailTF.text isEqualToString:@""] || [self.nombreTF.text isEqualToString:@""]){
     
@@ -110,6 +111,8 @@
 }
 
 - (IBAction)guardarButton:(id)sender {
+    
+    [self quitarTeclado];
     
     NSString *filepath = [self dataFilePath];
     BOOL success = [personas writeToFile:filepath atomically:YES];

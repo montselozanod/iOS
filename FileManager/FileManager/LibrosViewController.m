@@ -27,12 +27,32 @@
     self.tabla.delegate= self;
     self.tabla.dataSource= self;
     
+    [[NSNotificationCenter defaultCenter]
+            addObserver:self
+            selector:@selector(enterBackground:)
+            name:UIApplicationDidEnterBackgroundNotification
+            object:nil];
+    
     UITapGestureRecognizer *tap =   [[UITapGestureRecognizer alloc]
                                      initWithTarget:self
                                      action:@selector(quitarTeclado)];
     
     [self.view addGestureRecognizer:tap];
+    [self cargaDatos];
     
+}
+
+-(void)enterBackground:(NSNotification *)notification{
+
+    NSLog(@"here");
+    NSString *filepath = [self dataFilePath];
+    BOOL success = [personas writeToFile:filepath atomically:YES];
+    
+    if(success){
+        NSLog(@"Archivo fue guardado en %@", filepath);
+    }else{
+        NSLog(@"No se guardo en %@", filepath);
+    }
 }
 
 -(void)quitarTeclado {

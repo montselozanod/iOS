@@ -9,6 +9,10 @@
 #import "LaboINTMateriaTableViewController.h"
 
 @interface LaboINTMateriaTableViewController ()
+{
+    NSMutableArray *materias;
+}
+
 
 @end
 
@@ -32,6 +36,7 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,28 +49,30 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
+
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
-    return 0;
+    return materias.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MateriaCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    NSDictionary *celda = materias[indexPath.row];
+    cell.textLabel.Text = [celda objectForKey:@"nombre"];
+    cell.detailTextLabel.Text = [celda objectForKey:@"clave"];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -105,7 +112,7 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -113,7 +120,12 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if([[segue identifier] isEqualToString:@"showDetail"]){
+    
+    }else if([[segue identifier] isEqualToString:@"add"]){
+    
+    }
 }
-*/
+
 
 @end

@@ -22,6 +22,10 @@
 		B07F44DD18E33C75007EDD66 /* LabIntegradorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B07F44DC18E33C75007EDD66 /* LabIntegradorTests.m */; };
 		B07F44E818E33DDB007EDD66 /* LaboINTMateriaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B07F44E718E33DDB007EDD66 /* LaboINTMateriaTableViewController.m */; };
 		B07F44EC18E33E13007EDD66 /* LaboINTLibrosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B07F44EB18E33E13007EDD66 /* LaboINTLibrosTableViewController.m */; };
+		B07F44F018E344DA007EDD66 /* LaboINTAddMateriaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B07F44EF18E344DA007EDD66 /* LaboINTAddMateriaViewController.m */; };
+		B07F44F418E34508007EDD66 /* LaboINTAddLibroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B07F44F318E34508007EDD66 /* LaboINTAddLibroViewController.m */; };
+		B07F44F818E3453C007EDD66 /* LaboINTDetalleMateriaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B07F44F718E3453C007EDD66 /* LaboINTDetalleMateriaViewController.m */; };
+		B07F44FC18E34558007EDD66 /* LaboINTDetalleLibroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B07F44FB18E34558007EDD66 /* LaboINTDetalleLibroViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,14 @@
 		B07F44E718E33DDB007EDD66 /* LaboINTMateriaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaboINTMateriaTableViewController.m; sourceTree = "<group>"; };
 		B07F44EA18E33E13007EDD66 /* LaboINTLibrosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaboINTLibrosTableViewController.h; sourceTree = "<group>"; };
 		B07F44EB18E33E13007EDD66 /* LaboINTLibrosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaboINTLibrosTableViewController.m; sourceTree = "<group>"; };
+		B07F44EE18E344DA007EDD66 /* LaboINTAddMateriaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaboINTAddMateriaViewController.h; sourceTree = "<group>"; };
+		B07F44EF18E344DA007EDD66 /* LaboINTAddMateriaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaboINTAddMateriaViewController.m; sourceTree = "<group>"; };
+		B07F44F218E34508007EDD66 /* LaboINTAddLibroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaboINTAddLibroViewController.h; sourceTree = "<group>"; };
+		B07F44F318E34508007EDD66 /* LaboINTAddLibroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaboINTAddLibroViewController.m; sourceTree = "<group>"; };
+		B07F44F618E3453C007EDD66 /* LaboINTDetalleMateriaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaboINTDetalleMateriaViewController.h; sourceTree = "<group>"; };
+		B07F44F718E3453C007EDD66 /* LaboINTDetalleMateriaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaboINTDetalleMateriaViewController.m; sourceTree = "<group>"; };
+		B07F44FA18E34558007EDD66 /* LaboINTDetalleLibroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaboINTDetalleLibroViewController.h; sourceTree = "<group>"; };
+		B07F44FB18E34558007EDD66 /* LaboINTDetalleLibroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaboINTDetalleLibroViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +170,8 @@
 		B07F44E918E33DE1007EDD66 /* Materia */ = {
 			isa = PBXGroup;
 			children = (
+				B07F44F918E34541007EDD66 /* DetalleMateria */,
+				B07F44F118E344E2007EDD66 /* AddMateria */,
 				B07F44E618E33DDB007EDD66 /* LaboINTMateriaTableViewController.h */,
 				B07F44E718E33DDB007EDD66 /* LaboINTMateriaTableViewController.m */,
 			);
@@ -167,10 +181,48 @@
 		B07F44ED18E33E1C007EDD66 /* Libro */ = {
 			isa = PBXGroup;
 			children = (
+				B07F44FD18E3455E007EDD66 /* DetalleLibro */,
+				B07F44F518E34510007EDD66 /* AddLibro */,
 				B07F44EA18E33E13007EDD66 /* LaboINTLibrosTableViewController.h */,
 				B07F44EB18E33E13007EDD66 /* LaboINTLibrosTableViewController.m */,
 			);
 			name = Libro;
+			sourceTree = "<group>";
+		};
+		B07F44F118E344E2007EDD66 /* AddMateria */ = {
+			isa = PBXGroup;
+			children = (
+				B07F44EE18E344DA007EDD66 /* LaboINTAddMateriaViewController.h */,
+				B07F44EF18E344DA007EDD66 /* LaboINTAddMateriaViewController.m */,
+			);
+			name = AddMateria;
+			sourceTree = "<group>";
+		};
+		B07F44F518E34510007EDD66 /* AddLibro */ = {
+			isa = PBXGroup;
+			children = (
+				B07F44F218E34508007EDD66 /* LaboINTAddLibroViewController.h */,
+				B07F44F318E34508007EDD66 /* LaboINTAddLibroViewController.m */,
+			);
+			name = AddLibro;
+			sourceTree = "<group>";
+		};
+		B07F44F918E34541007EDD66 /* DetalleMateria */ = {
+			isa = PBXGroup;
+			children = (
+				B07F44F618E3453C007EDD66 /* LaboINTDetalleMateriaViewController.h */,
+				B07F44F718E3453C007EDD66 /* LaboINTDetalleMateriaViewController.m */,
+			);
+			name = DetalleMateria;
+			sourceTree = "<group>";
+		};
+		B07F44FD18E3455E007EDD66 /* DetalleLibro */ = {
+			isa = PBXGroup;
+			children = (
+				B07F44FA18E34558007EDD66 /* LaboINTDetalleLibroViewController.h */,
+				B07F44FB18E34558007EDD66 /* LaboINTDetalleLibroViewController.m */,
+			);
+			name = DetalleLibro;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,9 +324,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B07F44EC18E33E13007EDD66 /* LaboINTLibrosTableViewController.m in Sources */,
+				B07F44FC18E34558007EDD66 /* LaboINTDetalleLibroViewController.m in Sources */,
 				B07F44BF18E33C74007EDD66 /* LaboINTAppDelegate.m in Sources */,
 				B07F44BB18E33C74007EDD66 /* main.m in Sources */,
+				B07F44F418E34508007EDD66 /* LaboINTAddLibroViewController.m in Sources */,
 				B07F44E818E33DDB007EDD66 /* LaboINTMateriaTableViewController.m in Sources */,
+				B07F44F818E3453C007EDD66 /* LaboINTDetalleMateriaViewController.m in Sources */,
+				B07F44F018E344DA007EDD66 /* LaboINTAddMateriaViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

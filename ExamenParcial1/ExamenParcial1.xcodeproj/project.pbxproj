@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B024E5C818E21D8E00A993C7 /* Main 11-50-00-272.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B024E5C718E21D8E00A993C7 /* Main 11-50-00-272.storyboard */; };
 		B0B87E4E18BBAC0F00AEE6C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B87E4D18BBAC0F00AEE6C5 /* Foundation.framework */; };
 		B0B87E5018BBAC0F00AEE6C5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B87E4F18BBAC0F00AEE6C5 /* CoreGraphics.framework */; };
 		B0B87E5218BBAC0F00AEE6C5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B87E5118BBAC0F00AEE6C5 /* UIKit.framework */; };
@@ -23,7 +24,6 @@
 		B0B87E7C18BBAC0F00AEE6C5 /* ExamenParcial1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B87E7B18BBAC0F00AEE6C5 /* ExamenParcial1Tests.m */; };
 		B0B87E8718BBAE6700AEE6C5 /* LIBAgregarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B87E8618BBAE6700AEE6C5 /* LIBAgregarViewController.m */; };
 		B0B87E8A18BBAE8600AEE6C5 /* LIBLibro.m in Sources */ = {isa = PBXBuildFile; fileRef = B0B87E8918BBAE8600AEE6C5 /* LIBLibro.m */; };
-		B0B87E8D18BBBE2E00AEE6C5 /* Main 11-50-00-272.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0B87E8C18BBBE2E00AEE6C5 /* Main 11-50-00-272.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B024E5C718E21D8E00A993C7 /* Main 11-50-00-272.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Main 11-50-00-272.storyboard"; sourceTree = "<group>"; };
 		B0B87E4A18BBAC0F00AEE6C5 /* ExamenParcial1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExamenParcial1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0B87E4D18BBAC0F00AEE6C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B0B87E4F18BBAC0F00AEE6C5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,7 +63,6 @@
 		B0B87E8818BBAE8600AEE6C5 /* LIBLibro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIBLibro.h; sourceTree = "<group>"; };
 		B0B87E8918BBAE8600AEE6C5 /* LIBLibro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIBLibro.m; sourceTree = "<group>"; };
 		B0B87E8B18BBB8B300AEE6C5 /* LIBProto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LIBProto.h; sourceTree = "<group>"; };
-		B0B87E8C18BBBE2E00AEE6C5 /* Main 11-50-00-272.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Main 11-50-00-272.storyboard"; path = "../../../.Trash/Main 11-50-00-272.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +130,7 @@
 				B0B87E8918BBAE8600AEE6C5 /* LIBLibro.m */,
 				B0B87E6218BBAC0F00AEE6C5 /* LIBMasterViewController.h */,
 				B0B87E6318BBAC0F00AEE6C5 /* LIBMasterViewController.m */,
-				B0B87E8C18BBBE2E00AEE6C5 /* Main 11-50-00-272.storyboard */,
+				B024E5C718E21D8E00A993C7 /* Main 11-50-00-272.storyboard */,
 				B0B87E6518BBAC0F00AEE6C5 /* LIBDetailViewController.h */,
 				B0B87E6618BBAC0F00AEE6C5 /* LIBDetailViewController.m */,
 				B0B87E8B18BBB8B300AEE6C5 /* LIBProto.h */,
@@ -247,8 +247,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0B87E6918BBAC0F00AEE6C5 /* Images.xcassets in Resources */,
+				B024E5C818E21D8E00A993C7 /* Main 11-50-00-272.storyboard in Resources */,
 				B0B87E5818BBAC0F00AEE6C5 /* InfoPlist.strings in Resources */,
-				B0B87E8D18BBBE2E00AEE6C5 /* Main 11-50-00-272.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

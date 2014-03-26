@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B07F44AF18E33C74007EDD66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07F44AE18E33C74007EDD66 /* Foundation.framework */; };
+		B07F44B118E33C74007EDD66 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07F44B018E33C74007EDD66 /* CoreGraphics.framework */; };
+		B07F44B318E33C74007EDD66 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07F44B218E33C74007EDD66 /* UIKit.framework */; };
+		B07F44B918E33C74007EDD66 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B07F44B718E33C74007EDD66 /* InfoPlist.strings */; };
+		B07F44BB18E33C74007EDD66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B07F44BA18E33C74007EDD66 /* main.m */; };
+		B07F44BF18E33C74007EDD66 /* LaboINTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B07F44BE18E33C74007EDD66 /* LaboINTAppDelegate.m */; };
+		B07F44C218E33C74007EDD66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B07F44C018E33C74007EDD66 /* Main.storyboard */; };
+		B07F44CA18E33C75007EDD66 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B07F44C918E33C75007EDD66 /* Images.xcassets */; };
+		B07F44D118E33C75007EDD66 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07F44D018E33C75007EDD66 /* XCTest.framework */; };
+		B07F44D218E33C75007EDD66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07F44AE18E33C74007EDD66 /* Foundation.framework */; };
+		B07F44D318E33C75007EDD66 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07F44B218E33C74007EDD66 /* UIKit.framework */; };
+		B07F44DB18E33C75007EDD66 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B07F44D918E33C75007EDD66 /* InfoPlist.strings */; };
+		B07F44DD18E33C75007EDD66 /* LabIntegradorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B07F44DC18E33C75007EDD66 /* LabIntegradorTests.m */; };
+		B07F44E818E33DDB007EDD66 /* LaboINTMateriaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B07F44E718E33DDB007EDD66 /* LaboINTMateriaTableViewController.m */; };
+		B07F44EC18E33E13007EDD66 /* LaboINTLibrosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B07F44EB18E33E13007EDD66 /* LaboINTLibrosTableViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B07F44D418E33C75007EDD66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B07F44A318E33C74007EDD66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B07F44AA18E33C74007EDD66;
+			remoteInfo = LabIntegrador;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B07F44AB18E33C74007EDD66 /* LabIntegrador.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LabIntegrador.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B07F44AE18E33C74007EDD66 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B07F44B018E33C74007EDD66 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B07F44B218E33C74007EDD66 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B07F44B618E33C74007EDD66 /* LabIntegrador-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LabIntegrador-Info.plist"; sourceTree = "<group>"; };
+		B07F44B818E33C74007EDD66 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B07F44BA18E33C74007EDD66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B07F44BC18E33C74007EDD66 /* LabIntegrador-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LabIntegrador-Prefix.pch"; sourceTree = "<group>"; };
+		B07F44BD18E33C74007EDD66 /* LaboINTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaboINTAppDelegate.h; sourceTree = "<group>"; };
+		B07F44BE18E33C74007EDD66 /* LaboINTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaboINTAppDelegate.m; sourceTree = "<group>"; };
+		B07F44C118E33C74007EDD66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B07F44C918E33C75007EDD66 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B07F44CF18E33C75007EDD66 /* LabIntegradorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LabIntegradorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B07F44D018E33C75007EDD66 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B07F44D818E33C75007EDD66 /* LabIntegradorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LabIntegradorTests-Info.plist"; sourceTree = "<group>"; };
+		B07F44DA18E33C75007EDD66 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B07F44DC18E33C75007EDD66 /* LabIntegradorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LabIntegradorTests.m; sourceTree = "<group>"; };
+		B07F44E618E33DDB007EDD66 /* LaboINTMateriaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaboINTMateriaTableViewController.h; sourceTree = "<group>"; };
+		B07F44E718E33DDB007EDD66 /* LaboINTMateriaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaboINTMateriaTableViewController.m; sourceTree = "<group>"; };
+		B07F44EA18E33E13007EDD66 /* LaboINTLibrosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaboINTLibrosTableViewController.h; sourceTree = "<group>"; };
+		B07F44EB18E33E13007EDD66 /* LaboINTLibrosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaboINTLibrosTableViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B07F44A818E33C74007EDD66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B07F44B118E33C74007EDD66 /* CoreGraphics.framework in Frameworks */,
+				B07F44B318E33C74007EDD66 /* UIKit.framework in Frameworks */,
+				B07F44AF18E33C74007EDD66 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B07F44CC18E33C75007EDD66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B07F44D118E33C75007EDD66 /* XCTest.framework in Frameworks */,
+				B07F44D318E33C75007EDD66 /* UIKit.framework in Frameworks */,
+				B07F44D218E33C75007EDD66 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B07F44A218E33C74007EDD66 = {
+			isa = PBXGroup;
+			children = (
+				B07F44B418E33C74007EDD66 /* LabIntegrador */,
+				B07F44D618E33C75007EDD66 /* LabIntegradorTests */,
+				B07F44AD18E33C74007EDD66 /* Frameworks */,
+				B07F44AC18E33C74007EDD66 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B07F44AC18E33C74007EDD66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B07F44AB18E33C74007EDD66 /* LabIntegrador.app */,
+				B07F44CF18E33C75007EDD66 /* LabIntegradorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B07F44AD18E33C74007EDD66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B07F44AE18E33C74007EDD66 /* Foundation.framework */,
+				B07F44B018E33C74007EDD66 /* CoreGraphics.framework */,
+				B07F44B218E33C74007EDD66 /* UIKit.framework */,
+				B07F44D018E33C75007EDD66 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B07F44B418E33C74007EDD66 /* LabIntegrador */ = {
+			isa = PBXGroup;
+			children = (
+				B07F44BD18E33C74007EDD66 /* LaboINTAppDelegate.h */,
+				B07F44BE18E33C74007EDD66 /* LaboINTAppDelegate.m */,
+				B07F44C018E33C74007EDD66 /* Main.storyboard */,
+				B07F44E918E33DE1007EDD66 /* Materia */,
+				B07F44C918E33C75007EDD66 /* Images.xcassets */,
+				B07F44B518E33C74007EDD66 /* Supporting Files */,
+				B07F44ED18E33E1C007EDD66 /* Libro */,
+			);
+			path = LabIntegrador;
+			sourceTree = "<group>";
+		};
+		B07F44B518E33C74007EDD66 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B07F44B618E33C74007EDD66 /* LabIntegrador-Info.plist */,
+				B07F44B718E33C74007EDD66 /* InfoPlist.strings */,
+				B07F44BA18E33C74007EDD66 /* main.m */,
+				B07F44BC18E33C74007EDD66 /* LabIntegrador-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B07F44D618E33C75007EDD66 /* LabIntegradorTests */ = {
+			isa = PBXGroup;
+			children = (
+				B07F44DC18E33C75007EDD66 /* LabIntegradorTests.m */,
+				B07F44D718E33C75007EDD66 /* Supporting Files */,
+			);
+			path = LabIntegradorTests;
+			sourceTree = "<group>";
+		};
+		B07F44D718E33C75007EDD66 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B07F44D818E33C75007EDD66 /* LabIntegradorTests-Info.plist */,
+				B07F44D918E33C75007EDD66 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B07F44E918E33DE1007EDD66 /* Materia */ = {
+			isa = PBXGroup;
+			children = (
+				B07F44E618E33DDB007EDD66 /* LaboINTMateriaTableViewController.h */,
+				B07F44E718E33DDB007EDD66 /* LaboINTMateriaTableViewController.m */,
+			);
+			name = Materia;
+			sourceTree = "<group>";
+		};
+		B07F44ED18E33E1C007EDD66 /* Libro */ = {
+			isa = PBXGroup;
+			children = (
+				B07F44EA18E33E13007EDD66 /* LaboINTLibrosTableViewController.h */,
+				B07F44EB18E33E13007EDD66 /* LaboINTLibrosTableViewController.m */,
+			);
+			name = Libro;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B07F44AA18E33C74007EDD66 /* LabIntegrador */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B07F44E018E33C75007EDD66 /* Build configuration list for PBXNativeTarget "LabIntegrador" */;
+			buildPhases = (
+				B07F44A718E33C74007EDD66 /* Sources */,
+				B07F44A818E33C74007EDD66 /* Frameworks */,
+				B07F44A918E33C74007EDD66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LabIntegrador;
+			productName = LabIntegrador;
+			productReference = B07F44AB18E33C74007EDD66 /* LabIntegrador.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B07F44CE18E33C75007EDD66 /* LabIntegradorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B07F44E318E33C75007EDD66 /* Build configuration list for PBXNativeTarget "LabIntegradorTests" */;
+			buildPhases = (
+				B07F44CB18E33C75007EDD66 /* Sources */,
+				B07F44CC18E33C75007EDD66 /* Frameworks */,
+				B07F44CD18E33C75007EDD66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B07F44D518E33C75007EDD66 /* PBXTargetDependency */,
+			);
+			name = LabIntegradorTests;
+			productName = LabIntegradorTests;
+			productReference = B07F44CF18E33C75007EDD66 /* LabIntegradorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B07F44A318E33C74007EDD66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LaboINT;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = ITESM;
+				TargetAttributes = {
+					B07F44CE18E33C75007EDD66 = {
+						TestTargetID = B07F44AA18E33C74007EDD66;
+					};
+				};
+			};
+			buildConfigurationList = B07F44A618E33C74007EDD66 /* Build configuration list for PBXProject "LabIntegrador" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B07F44A218E33C74007EDD66;
+			productRefGroup = B07F44AC18E33C74007EDD66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B07F44AA18E33C74007EDD66 /* LabIntegrador */,
+				B07F44CE18E33C75007EDD66 /* LabIntegradorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B07F44A918E33C74007EDD66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B07F44CA18E33C75007EDD66 /* Images.xcassets in Resources */,
+				B07F44B918E33C74007EDD66 /* InfoPlist.strings in Resources */,
+				B07F44C218E33C74007EDD66 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B07F44CD18E33C75007EDD66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B07F44DB18E33C75007EDD66 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B07F44A718E33C74007EDD66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B07F44EC18E33E13007EDD66 /* LaboINTLibrosTableViewController.m in Sources */,
+				B07F44BF18E33C74007EDD66 /* LaboINTAppDelegate.m in Sources */,
+				B07F44BB18E33C74007EDD66 /* main.m in Sources */,
+				B07F44E818E33DDB007EDD66 /* LaboINTMateriaTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B07F44CB18E33C75007EDD66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B07F44DD18E33C75007EDD66 /* LabIntegradorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B07F44D518E33C75007EDD66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B07F44AA18E33C74007EDD66 /* LabIntegrador */;
+			targetProxy = B07F44D418E33C75007EDD66 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B07F44B718E33C74007EDD66 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B07F44B818E33C74007EDD66 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B07F44C018E33C74007EDD66 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B07F44C118E33C74007EDD66 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B07F44D918E33C75007EDD66 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B07F44DA18E33C75007EDD66 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B07F44DE18E33C75007EDD66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B07F44DF18E33C75007EDD66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B07F44E118E33C75007EDD66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LabIntegrador/LabIntegrador-Prefix.pch";
+				INFOPLIST_FILE = "LabIntegrador/LabIntegrador-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B07F44E218E33C75007EDD66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LabIntegrador/LabIntegrador-Prefix.pch";
+				INFOPLIST_FILE = "LabIntegrador/LabIntegrador-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B07F44E418E33C75007EDD66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LabIntegrador.app/LabIntegrador";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LabIntegrador/LabIntegrador-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LabIntegradorTests/LabIntegradorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		B07F44E518E33C75007EDD66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LabIntegrador.app/LabIntegrador";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LabIntegrador/LabIntegrador-Prefix.pch";
+				INFOPLIST_FILE = "LabIntegradorTests/LabIntegradorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B07F44A618E33C74007EDD66 /* Build configuration list for PBXProject "LabIntegrador" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B07F44DE18E33C75007EDD66 /* Debug */,
+				B07F44DF18E33C75007EDD66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B07F44E018E33C75007EDD66 /* Build configuration list for PBXNativeTarget "LabIntegrador" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B07F44E118E33C75007EDD66 /* Debug */,
+				B07F44E218E33C75007EDD66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B07F44E318E33C75007EDD66 /* Build configuration list for PBXNativeTarget "LabIntegradorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B07F44E418E33C75007EDD66 /* Debug */,
+				B07F44E518E33C75007EDD66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B07F44A318E33C74007EDD66 /* Project object */;
+}

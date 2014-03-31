@@ -36,9 +36,10 @@
 
 - (void)viewDidLoad
 {
+    [self refreshFields];
     
     [super viewDidLoad];
-    [self refreshFields];
+    
   
 	// Do any additional setup after loading the view, typically from a nib.
 }

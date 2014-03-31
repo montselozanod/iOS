@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="13C64" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Libro" representedClassName="Libro" syncable="YES">
+        <attribute name="isbn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="titulo" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="materiaRel" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Materia" inverseName="bibliografia" inverseEntity="Materia" syncable="YES"/>
+    </entity>
+    <entity name="Materia" representedClassName="Materia" syncable="YES">
+        <attribute name="clave" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="bibliografia" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Libro" inverseName="materiaRel" inverseEntity="Libro" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Materia" positionX="-56" positionY="27" width="128" height="88"/>
+        <element name="Libro" positionX="-63" positionY="-171" width="128" height="88"/>
+    </elements>
+</model>

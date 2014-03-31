@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B07F44FF18E3B3A7007EDD66 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B07F44FE18E3B3A7007EDD66 /* icon.png */; };
 		B086662618E0A775009FF0E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B086662518E0A775009FF0E2 /* Foundation.framework */; };
 		B086662818E0A775009FF0E2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B086662718E0A775009FF0E2 /* CoreGraphics.framework */; };
 		B086662A18E0A775009FF0E2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B086662918E0A775009FF0E2 /* UIKit.framework */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B07F44FE18E3B3A7007EDD66 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		B086662218E0A775009FF0E2 /* LabAppSettings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LabAppSettings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B086662518E0A775009FF0E2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B086662718E0A775009FF0E2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -91,6 +93,7 @@
 		B086661918E0A775009FF0E2 = {
 			isa = PBXGroup;
 			children = (
+				B07F44FE18E3B3A7007EDD66 /* icon.png */,
 				B086662B18E0A775009FF0E2 /* LabAppSettings */,
 				B086664D18E0A776009FF0E2 /* LabAppSettingsTests */,
 				B086662418E0A775009FF0E2 /* Frameworks */,
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0A51AD018E2AAFB0086B015 /* rabbit.png in Resources */,
+				B07F44FF18E3B3A7007EDD66 /* icon.png in Resources */,
 				B086665E18E0A78C009FF0E2 /* Settings.bundle in Resources */,
 				B086664118E0A775009FF0E2 /* Images.xcassets in Resources */,
 				B086663018E0A775009FF0E2 /* InfoPlist.strings in Resources */,

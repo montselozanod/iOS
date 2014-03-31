@@ -111,4 +111,122 @@ if (managedObjectContext != nil) {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
+#pragma mark - Metodos Singleton
+
+//metodos de singleton
+//inicializar singleton
+-(id) init{
+    
+    if(self = [super init]){
+        [self setListaLibros:[[NSMutableArray alloc]init] ];
+        [self setListaMaterias:[[NSMutableArray alloc]init] ];
+    }
+    
+    return self;
+}
+
+//metodo de clase que crea el thread
++(ManejoBD *) instancia{
+     //crear singleton
+    //crear thread
+    static ManejoBD * _instancia = nil;
+    static dispatch_once_t safer;
+    
+    //thread (solo una vez)
+    dispatch_once(&safer, ^(void)
+                     {
+                         _instancia = [[ManejoBD alloc]init];
+                     });
+    
+    return _instancia;
+    
+
+}
+
+//metodos para insertar en la BD
+- (void) insertarMateria:(id) datosMateria libros:(NSArray *)misLibros{
+
+    
+    NSManagedObjectContext *context = self.managedObjectContext; //manda llamar a metodos para crear el contexto, espacio donde se escriebn los valores que se generan cuando se utiliza core data
+    
+    Materia *nuevo = [NSEntityDescription insertNewObjectForEntityForName:@"Materia" inManagedObjectContext:context];
+    
+    NSDictionary *materia = (NSDictionary*) datosMateria;
+    
+    nuevo.clave= [materia objectForKey:@"clave"];
+    nuevo.nombre = [materia objectForKey:@"nombre"];
+    
+    //agregar a relacion de cada materia los libros asociados...como es inversa se hace la relacion tmb con libro
+    for (int i = 0; i < misLibros.count; i++){
+        [nuevo addBibliografiaObject:misLibros[i]];
+    }
+    
+    [self saveContext]; //todo lo que esta en memoria lo guarda en el coredata
+    
+}
+
+-(void) insertarLibro:(id) datosLibro{
+
+    NSManagedObjectContext *context = self.managedObjectContext; //manda llamar a metodos para crear el contexto, espacio donde se escriebn los valores que se generan cuando se utiliza core data
+    
+    Libro *nuevo = [NSEntityDescription insertNewObjectForEntityForName:@"Libro" inManagedObjectContext:context];
+    
+    NSDictionary *miLibro = (NSDictionary*) datosLibro;
+    
+    nuevo.titulo = [miLibro objectForKey:@"titulo"];
+    nuevo.isbn = [miLibro objectForKey:@"isbn"];
+    
+    [self saveContext]; //todo lo que esta en memoria lo guarda en el coredata
+}
+
+//metodos para cargar datos de la BD
+-(void) cargarMaterias{
+   
+    NSManagedObjectContext *context = self.managedObjectContext;
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Materia" inManagedObjectContext:context];
+    NSFetchRequest *request = [[NSFetchRequest alloc]init];
+    
+    [request setEntity:entity];
+    
+    NSError *error;
+    
+    NSMutableArray *datos = (NSMutableArray *)[context executeFetchRequest:request error:&error];
+    
+    if(datos.count == 0){
+        NSLog(@"No hay datos");
+    }else{
+        [self setListaMaterias:datos];
+    }
+}
+
+-(void) cargarLibros{
+
+    NSManagedObjectContext *context = self.managedObjectContext;
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Libro" inManagedObjectContext:context];
+    NSFetchRequest *request = [[NSFetchRequest alloc]init];
+    
+    [request setEntity:entity];
+    
+    NSError *error;
+    
+    NSMutableArray *datos = (NSMutableArray *)[context executeFetchRequest:request error:&error];
+    
+    if(datos.count == 0){
+        NSLog(@"No hay datos");
+    }else{
+        [self setListaLibros:datos];
+    }
+
+}
+
+//buscar
+
+-(id) buscarLibro: (NSString *)isbn{
+
+}
+
+-(NSArray*) buscarLibrosMateria: (NSString *)clave{
+
+}
+
 @end

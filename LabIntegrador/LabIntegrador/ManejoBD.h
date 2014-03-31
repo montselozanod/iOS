@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "Libro.h"
+#import "Materia.h"
 
 @interface ManejoBD : NSObject
 

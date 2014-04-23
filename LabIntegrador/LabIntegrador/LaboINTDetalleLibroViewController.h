@@ -14,4 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *isbnLabel;
 
+@property (strong, nonatomic) id objetoMostrar;
+
 @end

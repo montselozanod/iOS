@@ -7,6 +7,10 @@
 //
 
 #import "LaboINTMateriaTableViewController.h"
+#import "LaboINTAddMateriaViewController.h"
+#import "LaboINTDetalleMateriaViewController.h"
+#import "ManejoBD.h"
+#import "Materia.h"
 
 @interface LaboINTMateriaTableViewController ()
 {
@@ -37,6 +41,9 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    ManejoBD *servicios = [ManejoBD instancia];
+    materias = [NSMutableArray arrayWithArray:servicios.listaMaterias];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,9 +73,10 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MateriaCell" forIndexPath:indexPath];
     
-    NSDictionary *celda = materias[indexPath.row];
-    cell.textLabel.Text = [celda objectForKey:@"nombre"];
-    cell.detailTextLabel.Text = [celda objectForKey:@"clave"];
+    //NSDictionary *celda = materias[indexPath.row];
+    Materia *mat = [materias objectAtIndex:indexPath.row];
+    cell.textLabel.Text = mat.clave;
+    cell.detailTextLabel.Text = mat.nombre;
     
     return cell;
 }
@@ -121,13 +129,34 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     if([[segue identifier] isEqualToString:@"showDetail"]){
-    
+        
+       NSIndexPath *index = [self.tableView indexPathForSelectedRow];
+        [[segue destinationViewController] setObjetoMostrar: [materias objectAtIndex:index.row]];
     
     }else if([[segue identifier] isEqualToString:@"add"]){
     
+       [[segue destinationViewController] setDelegado:self];
     
+        //falta lo de setObjetomostrar
     }
 }
+
+#pragma mark - metodos de protocolo
+
+-(void) insertar:(id)datos{
+    if(!materias){
+        materias = [[NSMutableArray alloc]init];
+    }
+    
+    [materias insertObject: datos atIndex:0];
+    [self.tableView reloadData];
+}
+
+-(void)removerVista{
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 
 @end

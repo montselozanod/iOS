@@ -7,6 +7,7 @@
 //
 
 #import "LaboINTAddLibroViewController.h"
+#import "ManejoBD.h"
 
 @interface LaboINTAddLibroViewController ()
 
@@ -46,6 +47,23 @@
 }
 */
 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
+
 - (IBAction)saveButton:(id)sender {
+    
+    
+    ManejoBD *serv = [ManejoBD instancia];
+    
+    NSDictionary *libro = @{@"isbn" : self.isbnTF.text, @"titulo" : self.tituloTF.text};
+    
+    Libro *lib = [serv insertarLibro:libro];
+    
+    [self.delegado insertar: lib];
+    [self.delegado removerVista];
+    
+    
 }
 @end

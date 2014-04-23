@@ -26,9 +26,9 @@
 		B07F44F418E34508007EDD66 /* LaboINTAddLibroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B07F44F318E34508007EDD66 /* LaboINTAddLibroViewController.m */; };
 		B07F44F818E3453C007EDD66 /* LaboINTDetalleMateriaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B07F44F718E3453C007EDD66 /* LaboINTDetalleMateriaViewController.m */; };
 		B07F44FC18E34558007EDD66 /* LaboINTDetalleLibroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B07F44FB18E34558007EDD66 /* LaboINTDetalleLibroViewController.m */; };
+		B093F2DF1901FB4800D52E49 /* Libro.m in Sources */ = {isa = PBXBuildFile; fileRef = B093F2DE1901FB4800D52E49 /* Libro.m */; };
+		B093F2E21901FB4900D52E49 /* Materia.m in Sources */ = {isa = PBXBuildFile; fileRef = B093F2E11901FB4900D52E49 /* Materia.m */; };
 		B0A624FC18E9D3A600CDB01D /* Modelo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0A624FA18E9D3A600CDB01D /* Modelo.xcdatamodeld */; };
-		B0A6250318E9D6BC00CDB01D /* Materia.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A6250218E9D6BC00CDB01D /* Materia.m */; };
-		B0A6250618E9D6DD00CDB01D /* Libro.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A6250518E9D6DD00CDB01D /* Libro.m */; };
 		B0A6250A18E9D97A00CDB01D /* ManejoBD.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A6250918E9D97A00CDB01D /* ManejoBD.m */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B03F742E18EC796A00DB7FDC /* LaboINTProtocoloGuardar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaboINTProtocoloGuardar.h; sourceTree = "<group>"; };
 		B07F44AB18E33C74007EDD66 /* LabIntegrador.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LabIntegrador.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07F44AE18E33C74007EDD66 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B07F44B018E33C74007EDD66 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -72,11 +73,11 @@
 		B07F44F718E3453C007EDD66 /* LaboINTDetalleMateriaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaboINTDetalleMateriaViewController.m; sourceTree = "<group>"; };
 		B07F44FA18E34558007EDD66 /* LaboINTDetalleLibroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaboINTDetalleLibroViewController.h; sourceTree = "<group>"; };
 		B07F44FB18E34558007EDD66 /* LaboINTDetalleLibroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaboINTDetalleLibroViewController.m; sourceTree = "<group>"; };
+		B093F2DD1901FB4800D52E49 /* Libro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Libro.h; sourceTree = "<group>"; };
+		B093F2DE1901FB4800D52E49 /* Libro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Libro.m; sourceTree = "<group>"; };
+		B093F2E01901FB4900D52E49 /* Materia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Materia.h; sourceTree = "<group>"; };
+		B093F2E11901FB4900D52E49 /* Materia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Materia.m; sourceTree = "<group>"; };
 		B0A624FB18E9D3A600CDB01D /* Modelo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Modelo.xcdatamodel; sourceTree = "<group>"; };
-		B0A6250118E9D6BC00CDB01D /* Materia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Materia.h; sourceTree = "<group>"; };
-		B0A6250218E9D6BC00CDB01D /* Materia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Materia.m; sourceTree = "<group>"; };
-		B0A6250418E9D6DD00CDB01D /* Libro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Libro.h; path = LabIntegrador/Libro.h; sourceTree = "<group>"; };
-		B0A6250518E9D6DD00CDB01D /* Libro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Libro.m; path = LabIntegrador/Libro.m; sourceTree = "<group>"; };
 		B0A6250818E9D97A00CDB01D /* ManejoBD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManejoBD.h; sourceTree = "<group>"; };
 		B0A6250918E9D97A00CDB01D /* ManejoBD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManejoBD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,7 +109,6 @@
 		B07F44A218E33C74007EDD66 = {
 			isa = PBXGroup;
 			children = (
-				B0A624FA18E9D3A600CDB01D /* Modelo.xcdatamodeld */,
 				B07F44B418E33C74007EDD66 /* LabIntegrador */,
 				B07F44D618E33C75007EDD66 /* LabIntegradorTests */,
 				B07F44AD18E33C74007EDD66 /* Frameworks */,
@@ -139,6 +139,11 @@
 		B07F44B418E33C74007EDD66 /* LabIntegrador */ = {
 			isa = PBXGroup;
 			children = (
+				B0A624FA18E9D3A600CDB01D /* Modelo.xcdatamodeld */,
+				B093F2E01901FB4900D52E49 /* Materia.h */,
+				B093F2E11901FB4900D52E49 /* Materia.m */,
+				B093F2DD1901FB4800D52E49 /* Libro.h */,
+				B093F2DE1901FB4800D52E49 /* Libro.m */,
 				B0A6250718E9D73A00CDB01D /* Clases */,
 				B07F44BD18E33C74007EDD66 /* LaboINTAppDelegate.h */,
 				B07F44BE18E33C74007EDD66 /* LaboINTAppDelegate.m */,
@@ -148,6 +153,7 @@
 				B07F44B518E33C74007EDD66 /* Supporting Files */,
 				B07F44ED18E33E1C007EDD66 /* Libro */,
 				B0A6250B18E9D98200CDB01D /* API_BD */,
+				B03F742E18EC796A00DB7FDC /* LaboINTProtocoloGuardar.h */,
 			);
 			path = LabIntegrador;
 			sourceTree = "<group>";
@@ -186,8 +192,7 @@
 			children = (
 				B07F44F918E34541007EDD66 /* DetalleMateria */,
 				B07F44F118E344E2007EDD66 /* AddMateria */,
-				B07F44E618E33DDB007EDD66 /* LaboINTMateriaTableViewController.h */,
-				B07F44E718E33DDB007EDD66 /* LaboINTMateriaTableViewController.m */,
+				B093F2E41902277800D52E49 /* MateriaTableView */,
 			);
 			name = Materia;
 			sourceTree = "<group>";
@@ -197,8 +202,7 @@
 			children = (
 				B07F44FD18E3455E007EDD66 /* DetalleLibro */,
 				B07F44F518E34510007EDD66 /* AddLibro */,
-				B07F44EA18E33E13007EDD66 /* LaboINTLibrosTableViewController.h */,
-				B07F44EB18E33E13007EDD66 /* LaboINTLibrosTableViewController.m */,
+				B093F2E31902276800D52E49 /* LibroTableView */,
 			);
 			name = Libro;
 			sourceTree = "<group>";
@@ -239,13 +243,27 @@
 			name = DetalleLibro;
 			sourceTree = "<group>";
 		};
+		B093F2E31902276800D52E49 /* LibroTableView */ = {
+			isa = PBXGroup;
+			children = (
+				B07F44EA18E33E13007EDD66 /* LaboINTLibrosTableViewController.h */,
+				B07F44EB18E33E13007EDD66 /* LaboINTLibrosTableViewController.m */,
+			);
+			name = LibroTableView;
+			sourceTree = "<group>";
+		};
+		B093F2E41902277800D52E49 /* MateriaTableView */ = {
+			isa = PBXGroup;
+			children = (
+				B07F44E618E33DDB007EDD66 /* LaboINTMateriaTableViewController.h */,
+				B07F44E718E33DDB007EDD66 /* LaboINTMateriaTableViewController.m */,
+			);
+			name = MateriaTableView;
+			sourceTree = "<group>";
+		};
 		B0A6250718E9D73A00CDB01D /* Clases */ = {
 			isa = PBXGroup;
 			children = (
-				B0A6250218E9D6BC00CDB01D /* Materia.m */,
-				B0A6250118E9D6BC00CDB01D /* Materia.h */,
-				B0A6250418E9D6DD00CDB01D /* Libro.h */,
-				B0A6250518E9D6DD00CDB01D /* Libro.m */,
 			);
 			name = Clases;
 			path = ..;
@@ -362,10 +380,10 @@
 				B0A6250A18E9D97A00CDB01D /* ManejoBD.m in Sources */,
 				B07F44FC18E34558007EDD66 /* LaboINTDetalleLibroViewController.m in Sources */,
 				B07F44BF18E33C74007EDD66 /* LaboINTAppDelegate.m in Sources */,
-				B0A6250318E9D6BC00CDB01D /* Materia.m in Sources */,
-				B0A6250618E9D6DD00CDB01D /* Libro.m in Sources */,
+				B093F2DF1901FB4800D52E49 /* Libro.m in Sources */,
 				B07F44BB18E33C74007EDD66 /* main.m in Sources */,
 				B07F44F418E34508007EDD66 /* LaboINTAddLibroViewController.m in Sources */,
+				B093F2E21901FB4900D52E49 /* Materia.m in Sources */,
 				B07F44E818E33DDB007EDD66 /* LaboINTMateriaTableViewController.m in Sources */,
 				B0A624FC18E9D3A600CDB01D /* Modelo.xcdatamodeld in Sources */,
 				B07F44F818E3453C007EDD66 /* LaboINTDetalleMateriaViewController.m in Sources */,
@@ -594,8 +612,7 @@
 				B0A624FB18E9D3A600CDB01D /* Modelo.xcdatamodel */,
 			);
 			currentVersion = B0A624FB18E9D3A600CDB01D /* Modelo.xcdatamodel */;
-			name = Modelo.xcdatamodeld;
-			path = LabIntegrador/Modelo.xcdatamodeld;
+			path = Modelo.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

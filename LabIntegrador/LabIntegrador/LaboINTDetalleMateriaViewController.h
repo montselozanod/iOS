@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LaboINTDetalleMateriaViewController : UIViewController
+@interface LaboINTDetalleMateriaViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *claveLabel;
 @property (weak, nonatomic) IBOutlet UILabel *nombreLabel;
-
+@property (weak, nonatomic) IBOutlet UITableView *tableViewLibro;
+@property (strong, nonatomic) id objetoMostrar;
 @end

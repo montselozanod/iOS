@@ -144,7 +144,7 @@ if (managedObjectContext != nil) {
 }
 
 //metodos para insertar en la BD
-- (void) insertarMateria:(id) datosMateria libros:(NSArray *)misLibros{
+- (Materia *) insertarMateria:(id) datosMateria libros:(NSArray *)misLibros{
 
     
     NSManagedObjectContext *context = self.managedObjectContext; //manda llamar a metodos para crear el contexto, espacio donde se escriebn los valores que se generan cuando se utiliza core data
@@ -162,10 +162,11 @@ if (managedObjectContext != nil) {
     }
     
     [self saveContext]; //todo lo que esta en memoria lo guarda en el coredata
+    return nuevo;
     
 }
 
--(void) insertarLibro:(id) datosLibro{
+-(Libro *) insertarLibro:(id) datosLibro{
 
     NSManagedObjectContext *context = self.managedObjectContext; //manda llamar a metodos para crear el contexto, espacio donde se escriebn los valores que se generan cuando se utiliza core data
     
@@ -177,6 +178,8 @@ if (managedObjectContext != nil) {
     nuevo.isbn = [miLibro objectForKey:@"isbn"];
     
     [self saveContext]; //todo lo que esta en memoria lo guarda en el coredata
+    
+    return nuevo;
 }
 
 //metodos para cargar datos de la BD
@@ -209,6 +212,7 @@ if (managedObjectContext != nil) {
     
     NSError *error;
     
+    //acceso a base de datos... regresa un arreglo de libros
     NSMutableArray *datos = (NSMutableArray *)[context executeFetchRequest:request error:&error];
     
     if(datos.count == 0){
@@ -222,10 +226,42 @@ if (managedObjectContext != nil) {
 //buscar
 
 -(id) buscarLibro: (NSString *)isbn{
+    
+    NSManagedObjectContext *context = self.managedObjectContext;
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Libro" inManagedObjectContext:context];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDescription];
+    NSPredicate *predicado = [NSPredicate predicateWithFormat:@"(isbn = %@)", isbn];
+    [request setPredicate:predicado];
+    NSError *error;
+    NSArray *datos = [context executeFetchRequest:request error:&error];
+    
+    if ([datos count] == 0) {
+        Libro *v = nil;
+        return v;
+    } else {
+       Libro *v = datos[0];
+        return v;
+    }
 
 }
 
 -(NSArray*) buscarLibrosMateria: (NSString *)clave{
+    
+    NSFetchRequest *request;
+    NSPredicate *predicado;
+    NSManagedObjectContext *context = self.managedObjectContext;
+    NSEntityDescription *entityDescriptionMateria = [NSEntityDescription entityForName:@"Mascota" inManagedObjectContext:context];
+    request = [[NSFetchRequest alloc]init];
+    [request setEntity:entityDescriptionMateria];
+    predicado = [NSPredicate predicateWithFormat:@"(clave = %@)", clave];
+    [request setPredicate:predicado];
+    NSError *error;
+    NSArray *datos = [context executeFetchRequest:request error:&error];
+    Materia *materia = datos[0];
+    NSSet *libros= materia.bibliografia;
+    NSArray *lista = [libros allObjects];
+    return lista;
 
 }
 

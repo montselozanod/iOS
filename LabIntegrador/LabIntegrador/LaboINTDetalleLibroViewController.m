@@ -7,6 +7,7 @@
 //
 
 #import "LaboINTDetalleLibroViewController.h"
+#import "Libro.h"
 
 @interface LaboINTDetalleLibroViewController ()
 
@@ -27,6 +28,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    Libro *l = self.objetoMostrar;
+    
+    self.tituloLabel.text = l.titulo;
+    self.isbnLabel.text = l.isbn;
+    
 }
 
 - (void)didReceiveMemoryWarning

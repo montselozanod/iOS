@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LaboINTProtocoloGuardar.h"
 
-@interface LaboINTLibrosTableViewController : UITableViewController
+@interface LaboINTLibrosTableViewController : UITableViewController <LaboINTProtocoloGuardar>
 
 @end

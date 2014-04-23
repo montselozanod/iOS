@@ -7,12 +7,19 @@
 //
 
 #import "LaboINTAppDelegate.h"
+#import "ManejoBD.h"
 
 @implementation LaboINTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    //instancia de singleton....
+    
+    ManejoBD *servicios = [ManejoBD instancia];
+    [servicios cargarLibros];
+    [servicios cargarMaterias];
     return YES;
 }
 							

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>angry_birds_cake.jpg</string>
+	<string>creme_brelee.jpg</string>
+	<string>egg_benedict.jpg</string>
+	<string>full_breakfast.jpg</string>
+	<string>green_tea.jpg</string>
+	<string>ham_and_cheese_panini.jpg</string>
+	<string>ham_and_egg_sandwich.jpg</string>
+	<string>hamburger.jpg</string>
+	<string>instant_noodle_with_egg.jpg</string>
+	<string>japanese_noodle_with_pork.jpg</string>
+	<string>mushroom_risotto.jpg</string>
+	<string>noodle_with_bbq_pork.jpg</string>
+	<string>starbucks_coffee.jpg</string>
+	<string>thai_shrimp_cake.jpg</string>
+	<string>vegetable_curry.jpg</string>
+	<string>white_chocolate_donut.jpg</string>
+</array>
+</plist>

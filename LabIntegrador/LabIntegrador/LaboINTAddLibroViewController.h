@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LaboINTProtocoloGuardar.h"
 
 @interface LaboINTAddLibroViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *tituloTF;
 
 @property (weak, nonatomic) IBOutlet UITextField *isbnTF;
+
+@property id <LaboINTProtocoloGuardar> delegado;
+
 - (IBAction)saveButton:(id)sender;
 
 @end

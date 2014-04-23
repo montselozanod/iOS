@@ -2,13 +2,14 @@
 //  Materia.h
 //  LabIntegrador
 //
-//  Created by Maria Montserrat Lozano on 31/03/14.
+//  Created by Maria Montserrat Lozano on 18/04/14.
 //  Copyright (c) 2014 ITESM. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class Libro;
 
 @interface Materia : NSManagedObject
 

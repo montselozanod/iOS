@@ -29,8 +29,8 @@
 +(ManejoBD *) instancia; //metodo de clase que crea el thread
 
 //metodos para insertar en la BD
-- (void) insertarMateria:(id) datosMateria libros:(NSArray *)misLibros;
--(void) insertarLibro:(id) datosLibro;
+- (Materia *) insertarMateria:(id) datosMateria libros:(NSArray *)misLibros;
+-(Libro *) insertarLibro:(id) datosLibro;
 
 //metodos para cargar datos de la BD
 -(void) cargarMaterias;

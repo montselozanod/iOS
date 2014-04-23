@@ -7,8 +7,14 @@
 //
 
 #import "LaboINTLibrosTableViewController.h"
+#import "LaboINTAddLibroViewController.h"
+#import "LaboINTDetalleLibroViewController.h"
+#import "ManejoBD.h"
 
-@interface LaboINTLibrosTableViewController ()
+@interface LaboINTLibrosTableViewController (){
+
+    NSMutableArray *listaLibros;
+}
 
 @end
 
@@ -32,6 +38,11 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    ManejoBD *servicios = [ManejoBD instancia];
+    listaLibros = [NSMutableArray arrayWithArray:servicios.listaLibros];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,28 +55,33 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
+
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
-    return 0;
+    return listaLibros.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LibroCell" forIndexPath:indexPath];
     
     // Configure the cell...
     
+    Libro *l = listaLibros[indexPath.row];
+    
+    cell.textLabel.text = l.titulo;
+    cell.detailTextLabel.text = l.isbn;
+    
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -105,15 +121,40 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if([[segue identifier] isEqualToString:@"showDetail"]){
+        
+        NSIndexPath *index = [self.tableView indexPathForSelectedRow];
+        [[segue destinationViewController] setObjetoMostrar: [listaLibros objectAtIndex:index.row]];
+
+    }else if([[segue identifier] isEqualToString:@"add"]){
+        
+        [[segue destinationViewController] setDelegado: self];
+    }
 }
-*/
+
+#pragma mark - metodos de protocolo
+
+-(void) insertar:(id)datos{
+    if(!listaLibros){
+        listaLibros = [[NSMutableArray alloc]init];
+    }
+    
+    Libro *lib = (Libro *)datos;
+    
+    [listaLibros addObject:lib];
+    [self.tableView reloadData];
+}
+
+-(void)removerVista{
+
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 
 @end

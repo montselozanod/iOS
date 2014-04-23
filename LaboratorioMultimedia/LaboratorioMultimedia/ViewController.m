@@ -37,8 +37,45 @@
 }
 
 - (IBAction)selectButton:(id)sender {
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc]init];
+    picker.delegate = self;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+}
+
+-(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    UIImage *imagen = [info objectForKey:UIImagePickerControllerEditedImage]; //imagen editada
+    
+    if(&imagen ==nil){
+        
+        imagen = [info objectForKey:UIImagePickerControllerOriginalImage];
+    }
+    
+    self.imageView.image= imagen;
+    
+    if([picker sourceType] == UIImagePickerControllerSourceTypeCamera){
+        UIImageWriteToSavedPhotosAlbum(imagen, self, @selector(image:finishedWithError:contextInfo:), nil);
+    }
+    
+}
+
+-(void) image: (UIImage *) image finishedWithError: (NSError *) error contextInfo: (void *)contextInfo{
+    if(error){
+        
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"ERROR" message:@"Error al guardar" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    }
+}
+
+-(void) imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    
 }
 - (IBAction)takeButton:(id)sender {
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc]init];
+    picker.delegate = self;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    [self presentViewController:picker animated:YES completion:NULL];
+   
 }
 
 - (IBAction)playVideo:(id)sender {

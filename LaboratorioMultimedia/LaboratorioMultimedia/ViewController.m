@@ -28,6 +28,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    if(![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"ERROR" message:@"No se tiene acceso a camara." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,12 +46,13 @@
     UIImagePickerController *picker = [[UIImagePickerController alloc]init];
     picker.delegate = self;
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    [self presentViewController:picker animated:YES completion:NULL];
 }
 
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
     UIImage *imagen = [info objectForKey:UIImagePickerControllerEditedImage]; //imagen editada
     
-    if(&imagen ==nil){
+    if(imagen ==nil){
         
         imagen = [info objectForKey:UIImagePickerControllerOriginalImage];
     }
@@ -55,7 +61,12 @@
     
     if([picker sourceType] == UIImagePickerControllerSourceTypeCamera){
         UIImageWriteToSavedPhotosAlbum(imagen, self, @selector(image:finishedWithError:contextInfo:), nil);
+        
     }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    
     
 }
 
@@ -63,18 +74,27 @@
     if(error){
         
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"ERROR" message:@"Error al guardar" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
     }
 }
 
 -(void) imagePickerControllerDidCancel:(UIImagePickerController *)picker{
     
+    [self dismissViewControllerAnimated:YES completion: NULL];
+    
 }
 - (IBAction)takeButton:(id)sender {
     
-    UIImagePickerController *picker = [[UIImagePickerController alloc]init];
-    picker.delegate = self;
-    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    [self presentViewController:picker animated:YES completion:NULL];
+    if(![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"ERROR" message:@"No se tiene acceso a camara." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }else{
+    
+        UIImagePickerController *picker = [[UIImagePickerController alloc]init];
+        picker.delegate = self;
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        [self presentViewController:picker animated:YES completion:NULL];
+    }
    
 }
 
